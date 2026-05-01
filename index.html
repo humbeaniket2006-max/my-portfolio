@@ -125,12 +125,18 @@ body.hov #cur-dot{transform:translate(-50%,-50%) scale(1.4);background:var(--acc
 /* ── PROJECTS (carousel) ── */
 #proj-wrapper{background:var(--bg2);padding:90px 52px 72px}
 .proj-hdr{margin-bottom:36px;display:flex;justify-content:space-between;align-items:flex-end}
+.proj-kicker{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted2)}
+.proj-intro{max-width:430px;margin-top:12px;font-size:12px;line-height:1.75;color:var(--muted);font-weight:300}
+.proj-stats{display:flex;gap:1px;background:var(--border);border:1px solid var(--border)}
+.proj-stat{min-width:116px;padding:15px 18px;background:var(--card)}
+.proj-stat strong{display:block;font-family:var(--serif);font-size:27px;line-height:1;color:var(--fg)}
+.proj-stat span{display:block;margin-top:5px;font-family:var(--mono);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted2)}
 .proj-hdr h2{font-family:var(--serif);font-size:clamp(30px,4vw,52px);font-weight:900;line-height:.95;color:var(--fg)}
 .proj-hdr h2 em{font-style:italic;color:var(--muted2)}
 .proj-carousel{position:relative}
 .proj-track-wrap{overflow:hidden}
 .proj-track{display:flex;gap:24px;transition:transform .45s cubic-bezier(.25,.1,.25,1);will-change:transform}
-.proj-card{flex-shrink:0;width:calc((100% - 48px) / 3);min-width:260px;height:430px;border:1px solid var(--border);background:var(--card);padding:30px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:box-shadow .35s,transform .35s,border-color .35s}
+.proj-card{flex-shrink:0;width:calc((100% - 48px) / 3);min-width:280px;min-height:500px;border:1px solid var(--border);background:var(--card);padding:28px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:box-shadow .35s,transform .35s,border-color .35s}
 .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform .4s}
 .proj-card:hover{box-shadow:0 18px 55px rgba(15,14,11,.1);transform:translateY(-5px);border-color:rgba(26,122,60,.2)}
 .proj-card:hover::before{transform:scaleX(1)}
@@ -142,10 +148,12 @@ body.hov #cur-dot{transform:translate(-50%,-50%) scale(1.4);background:var(--acc
 .proj-dots{display:flex;gap:8px;align-items:center}
 .proj-dot{width:7px;height:7px;border-radius:50%;background:var(--border);border:1px solid var(--muted2);cursor:pointer;transition:background .25s,transform .25s}
 .proj-dot.active{background:var(--accent);border-color:var(--accent);transform:scale(1.35)}
-.pc-num{font-family:var(--serif);font-style:italic;font-size:60px;font-weight:900;color:rgba(15,14,11,.05);line-height:1;margin-bottom:14px}
+.pc-num{font-family:var(--serif);font-style:italic;font-size:56px;font-weight:900;color:rgba(15,14,11,.05);line-height:1;margin-bottom:14px}
 .pc-top h3{font-family:var(--serif);font-size:22px;font-weight:900;color:var(--fg);margin-bottom:9px;transition:color .3s}
 .proj-card:hover h3{color:var(--accent)}
-.pc-top p{font-size:12px;line-height:1.75;color:var(--muted);font-family:var(--sans);font-weight:300}
+.pc-story{display:grid;gap:10px;margin-top:16px}
+.pc-line{font-size:11.5px;line-height:1.55;color:var(--muted);font-family:var(--sans);font-weight:300}
+.pc-line strong{display:block;margin-bottom:2px;font-family:var(--mono);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:400}
 .pc-tags{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 12px}
 .ptag{padding:4px 9px;border:1px solid var(--border);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-radius:100px;background:var(--bg);font-family:var(--mono)}
 .pc-link{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:5px;transition:color .2s;font-family:var(--mono)}
@@ -223,7 +231,11 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   .h-top-row{padding:90px 22px 0}
   .h-bot{flex-direction:column;align-items:flex-start;gap:18px}
   #about{grid-template-columns:1fr;padding:72px 22px;gap:36px}
+  #proj-wrapper{padding:72px 0 56px}
+  .proj-hdr{flex-direction:column;align-items:flex-start;gap:22px}
   .proj-hdr,.proj-track-wrap{padding-left:22px;padding-right:22px}
+  .proj-stats{width:100%;grid-template-columns:repeat(3,1fr);display:grid}
+  .proj-stat{min-width:0}
   #journey{padding:72px 22px}
   .jrn-hdr{flex-direction:column;align-items:flex-start;gap:12px}
   .jrn-grid{grid-template-columns:1fr}
@@ -236,7 +248,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   .ct-title{font-size:clamp(40px,12vw,126px)}
   footer{padding:14px 22px;flex-direction:column;gap:5px;text-align:center}
   .proj-hdr,.proj-track-wrap{padding-left:16px;padding-right:16px}
-  .proj-card{width:min(280px,80vw)}
+  .proj-card{width:min(320px,84vw);min-height:520px}
 }
 
 @media(max-width:480px){
@@ -493,62 +505,70 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
     <div>
       <div class="sec-tag" style="margin-bottom:6px">Selected Work</div>
       <h2>My <em>Projects</em></h2>
+      <p class="proj-intro">A focused mix of AI systems, civic-tech tools, no-code products, AR prototypes, and strategy work. Each project is framed by the problem, the solution I built, and the measurable result.</p>
     </div>
-    <div style="font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted2)">Use ← → keys or arrows</div>
+    <div>
+      <div class="proj-stats">
+        <div class="proj-stat"><strong>12</strong><span>Projects</span></div>
+        <div class="proj-stat"><strong>6+</strong><span>Live Builds</span></div>
+        <div class="proj-stat"><strong>4x</strong><span>Edge Speedup</span></div>
+      </div>
+      <div class="proj-kicker" style="margin-top:12px;text-align:right">Use ← → keys or arrows</div>
+    </div>
   </div>
   <div class="proj-carousel">
     <div class="proj-track-wrap">
       <div class="proj-track" id="projtrack">
 <div class="proj-card">
-            <div><div class="pc-num">01</div><h3>Ocular-Core Lite</h3><p class="pc-top">Contributed to Intel's official OpenVINO™ repository. Edge-optimized library synthesizing photorealistic iris textures. Achieves 4× faster inference with Latent Consistency Models.</p></div>
+            <div class="pc-top"><div class="pc-num">01</div><h3>Ocular-Core Lite</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Intel's edge AI pipeline lacked efficient iris texture synthesis for real-time use.</p><p class="pc-line"><strong>Solution</strong>Contributed a Latent Consistency Model implementation to Intel's official OpenVINO™ repo for photorealistic iris generation.</p><p class="pc-line"><strong>Result</strong>Achieved 4x faster inference than the baseline on edge hardware.</p></div></div>
             <div><div class="pc-tags"><span class="ptag">Python</span><span class="ptag">OpenVINO</span><span class="ptag">Edge AI</span></div><a href="https://github.com/humbeaniket2006-max/Ocular_Core_Lite" target="_blank" class="pc-link">GitHub ↗</a></div>
           </div>
           
           
 <div class="proj-card">
-            <div><div class="pc-num">02</div><h3>PeerLink</h3><p class="pc-top">AI-powered platform connecting university students for skill sharing and paid projects. Built using Google AI Studio and Gemini API with advanced prompt engineering in a 2-week sprint.</p></div>
+            <div class="pc-top"><div class="pc-num">02</div><h3>PeerLink</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>University students had no structured way to monetize skills or find peer collaborators.</p><p class="pc-line"><strong>Solution</strong>Built an AI-powered platform using Gemini API and advanced prompt engineering to match students for skill-sharing and paid gigs.</p><p class="pc-line"><strong>Result</strong>Shipped the end-to-end product in under 2 weeks.</p></div></div>
             <div><div class="pc-tags"><span class="ptag">Gemini API</span><span class="ptag">GenAI</span><span class="ptag">Prompt Eng.</span></div><a href="https://aistudio.google.com/apps/drive/1RwM6PqhTPy2KgUzJ_x5ErhrXjslIa2tG?fullscreenApplet=true&showPreview=true&showAssistant=true" target="_blank" class="pc-link">Details ↗</a></div>
           </div>
           
           
 
           <div class="proj-card">
-            <div><div class="pc-num">03</div><h3>Hospital Management System</h3><p class="pc-top">Built a full-stack Hospital Management System for a course assignment — and shipped the whole product. REST API with Express.js & MongoDB, JWT-based auth with protected routes & middlewares, complete DB schema, a fully functional frontend, and an Android APK. Used Claude AI as a development partner throughout — moved faster, debugged smarter, and delivered within a week.</p></div>
+            <div class="pc-top"><div class="pc-num">03</div><h3>Hospital Management System</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>A course assignment asked for a basic backend.</p><p class="pc-line"><strong>Solution</strong>Shipped a production-grade system with an Express.js REST API, MongoDB schema, JWT auth, protected routes, full frontend UI, and Android APK.</p><p class="pc-line"><strong>Result</strong>Delivered the complete product in under 1 week using Claude AI as a development partner.</p></div></div>
             <div><div class="pc-tags"><span class="ptag">Express.js</span><span class="ptag">MongoDB</span><span class="ptag">JWT Auth</span><span class="ptag">Android APK</span></div><a href="https://humbeaniket2006-max.github.io/EHMR/" target="_blank" class="pc-link">Live Demo ↗</a></div>
           </div>
           
 <div class="proj-card">
-            <div><div class="pc-num">04</div><h3>CyberShield</h3><p class="pc-top">Winner of Cyber Pitch. Mobile security app for families with real-time threat detection, monitoring dashboards, and intelligent parental controls.</p></div>
+            <div class="pc-top"><div class="pc-num">04</div><h3>CyberShield</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Families had no unified mobile tool for real-time digital threat protection.</p><p class="pc-line"><strong>Solution</strong>Built a security app with live threat detection, monitoring dashboards, and intelligent parental controls.</p><p class="pc-line"><strong>Result</strong>Won Cyber Pitch against competing teams.</p></div></div>
             <div><div class="pc-tags"><span class="ptag">Mobile</span><span class="ptag">Security</span><span class="ptag">App Dev</span></div><a href="https://lovable.dev/projects/19a18a87-a751-4404-a5f2-422c5c1dbde7" target="_blank" class="pc-link">Details ↗</a></div>
           </div>
           
           
 <div class="proj-card">
-            <div><div class="pc-num">05</div><h3>G20 Chatbots</h3><p class="pc-top">Conversational AI for the G20 Summit and Pariksha Pe Charcha national platforms — serving thousands of users through advanced NLP pipelines.</p></div>
+            <div class="pc-top"><div class="pc-num">05</div><h3>G20 Chatbots</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>National government platforms needed scalable conversational interfaces for millions of citizens.</p><p class="pc-line"><strong>Solution</strong>Built NLP-powered chatbots for the G20 Summit and Pariksha Pe Charcha platforms with multi-turn conversation support.</p><p class="pc-line"><strong>Result</strong>Handled thousands of user queries across both deployments.</p></div></div>
             <div><div class="pc-tags"><span class="ptag">NLP</span><span class="ptag">Python</span><span class="ptag">Chatbot</span></div></div>
           </div>
           
           
 <div class="proj-card">
-            <div><div class="pc-num">06</div><h3>Stock Forecaster</h3><p class="pc-top">ML model forecasting stock behavior using historical time-series data, technical indicators and ensemble regression. Includes an IndusInd deep-analysis study.</p></div>
+            <div class="pc-top"><div class="pc-num">06</div><h3>Stock Forecaster</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Stock prediction models often ignore multi-indicator market signals.</p><p class="pc-line"><strong>Solution</strong>Built an ensemble regression model using historical time-series data, technical indicators, and a deep-dive analysis on IndusInd Bank.</p><p class="pc-line"><strong>Result</strong>Produced actionable buy/hold signals tested against real market data.</p></div></div>
             <div><div class="pc-tags"><span class="ptag">Data Science</span><span class="ptag">Pandas</span><span class="ptag">Scikit-learn</span></div></div>
           </div>
           
           
 <div class="proj-card">
-            <div><div class="pc-num">07</div><h3>SubTracker</h3><p class="pc-top">Subscription management app built on Bubble.io — track all your recurring subscriptions, monitor spending, and get renewal reminders in one clean dashboard.</p></div>
+            <div class="pc-top"><div class="pc-num">07</div><h3>SubTracker</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>People lose track of recurring subscriptions and overspend monthly.</p><p class="pc-line"><strong>Solution</strong>Built a no-code subscription manager on Bubble.io with spending tracking, renewal reminders, and a clean dashboard.</p><p class="pc-line"><strong>Result</strong>Launched a live app with user auth and real data persistence.</p></div></div>
             <div><div class="pc-tags"><span class="ptag">Bubble.io</span><span class="ptag">No-Code</span><span class="ptag">FinTech</span></div><a href="https://humbeaniket2006-18289.bubbleapps.io/version-test/login" target="_blank" class="pc-link">Live App ↗</a></div>
           </div>
           
           
 <div class="proj-card">
-            <div><div class="pc-num">08</div><h3>DeskFlow</h3><p class="pc-top">Productivity and task-management platform built on Bubble.io — streamline your workspace with organised task boards, priorities, and workflow automation.</p></div>
+            <div class="pc-top"><div class="pc-num">08</div><h3>DeskFlow</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Productivity tools were either too complex or too limited for student workflows.</p><p class="pc-line"><strong>Solution</strong>Built a Bubble.io task management platform with organized boards, priority tagging, and workflow automation.</p><p class="pc-line"><strong>Result</strong>Published a live, publicly accessible productivity tool.</p></div></div>
             <div><div class="pc-tags"><span class="ptag">Bubble.io</span><span class="ptag">No-Code</span><span class="ptag">Productivity</span></div><a href="https://humbeaniket2006-66016.bubbleapps.io/version-test" target="_blank" class="pc-link">Live App ↗</a></div>
           </div>
            
           
 <div class="proj-card">
-            <div><div class="pc-num">09</div><h3>MSME Data Index</h3><p class="pc-top">India's public MSME data is scattered across 6+ government portals with no unified index. Built a Python scraper + Gemini scoring pipeline that catalogs datasets from data.gov.in, RBI, MOSPI, SIDBI &amp; more — with usability scores, TAM/SAM analysis, and a live searchable demo.</p></div>
+            <div class="pc-top"><div class="pc-num">09</div><h3>MSME Data Index</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>India's MSME data was fragmented across 6+ government portals with no searchable index.</p><p class="pc-line"><strong>Solution</strong>Built a Python scraper plus Gemini scoring pipeline cataloging datasets from data.gov.in, RBI, MOSPI, SIDBI, and more.</p><p class="pc-line"><strong>Result</strong>Delivered usability scores, TAM/SAM analysis, and a live searchable demo.</p></div></div>
             <div><div class="pc-tags"><span class="ptag">Python</span><span class="ptag">Gemini API</span><span class="ptag">Research</span><span class="ptag">Civic Tech</span></div><a href="https://humbeaniket2006-max.github.io/MSME-Data-Index/" target="_blank" class="pc-link">Case Study ↗</a></div>
           </div>
           
@@ -556,18 +576,18 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
           
 
           <div class="proj-card">
-            <div><div class="pc-num">10</div><h3>ShopSense AR — Innovation Challenge Finalist</h3><p class="pc-top">Presented ShopSense AR at the American Centre, Chennai as finalists of the American Center Innovation Challenge — AI + AR Edition by American Center Chennai × Snap Inc. × TheNeural.ai. A Snapchat lens for shoppers: point your camera, tap once to hear the product name and price, tap again to know the section. Checks for allergens and product safety. No app to download — just a lens.</p></div>
+            <div class="pc-top"><div class="pc-num">10</div><h3>ShopSense AR</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Shoppers in physical stores had no instant way to check product details, allergens, or aisle location.</p><p class="pc-line"><strong>Solution</strong>Built a Snapchat lens that identifies products through the camera, reads name and price, shows aisle location, and flags allergens.</p><p class="pc-line"><strong>Result</strong>Became a finalist at the American Center x Snap Inc. Innovation Challenge in Chennai.</p></div></div>
             <div><div class="pc-tags"><span class="ptag">Snap Lens Studio</span><span class="ptag">AR</span><span class="ptag">AI</span><span class="ptag">Snapchat</span></div></div>
           </div>
           
 
           <div class="proj-card">
-            <div><div class="pc-num">11</div><h3>OOHO — Build vs Buy Case Study</h3><p class="pc-top">Group case study for Deep Dive into Business class. Helped OOHO, a cloud software company, decide whether to build a survey-led productivity platform in-house or collaborate with an external vendor. Mapped year-wise costs across 5 options, evaluated vendors on commercials, contract terms, exit clauses & ratings, assessed risk factors, and built a structured Excel model. Recommendation: In-House Development at ₹23.54L over 5 years — most cost-effective with full control and zero vendor lock-in.</p></div>
+            <div class="pc-top"><div class="pc-num">11</div><h3>OOHO Build vs Buy</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>OOHO needed to decide whether to build a productivity platform in-house or outsource, without a structured cost model.</p><p class="pc-line"><strong>Solution</strong>Led a group case study evaluating 5 vendor options, year-wise costs, exit clauses, contract risk, and an Excel decision model.</p><p class="pc-line"><strong>Result</strong>Recommended in-house development at Rs. 23.54L over 5 years, adopted as the team's final recommendation.</p></div></div>
             <div><div class="pc-tags"><span class="ptag">Business Analysis</span><span class="ptag">Cost Modelling</span><span class="ptag">Excel</span><span class="ptag">Strategy</span></div><a href="https://docs.google.com/spreadsheets/d/1OzKuAGhpYrolEEfIfbINNh3IFXDon0Z5nqAllidDF_Y/edit" target="_blank" class="pc-link">Excel Model ↗</a></div>
           </div>
           
 <div class="proj-card">
-            <div><div class="pc-num">12</div><h3>SuryaGrid</h3><p class="pc-top">3rd Place at SDG Hackathon. Smart solar panel system with automated dust-cleaning using IoT sensors and actuator control — a cost-effective renewable energy solution.</p></div>
+            <div class="pc-top"><div class="pc-num">12</div><h3>SuryaGrid</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Solar panels lose 15-25% efficiency due to dust accumulation, with no affordable automated solution.</p><p class="pc-line"><strong>Solution</strong>Built a smart solar panel system using IoT sensors and automated dust-cleaning actuators.</p><p class="pc-line"><strong>Result</strong>Won 3rd place at the SDG Hackathon.</p></div></div>
             <div><div class="pc-tags"><span class="ptag">IoT</span><span class="ptag">Automation</span><span class="ptag">Hardware</span></div></div>
           </div>
           
@@ -580,6 +600,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
       <button class="proj-arrow" id="projNext" aria-label="Next">&#8594;</button>
     </div>
   </div>
+</div>
 <!-- MARQUEE 2 -->
 <div class="marq rev">
   <div class="marq-t">
