@@ -158,6 +158,8 @@ body.hov #cur-dot{transform:translate(-50%,-50%) scale(1.4);background:var(--acc
 .pc-img{position:relative;z-index:1;order:1;aspect-ratio:590/300;width:100%;overflow:hidden;border-radius:0;background:#161616;margin-bottom:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
 .pc-img img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .55s cubic-bezier(.16,1,.3,1),filter .35s}
 .pc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(15,14,11,.2));pointer-events:none}
+.pc-img-empty{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f4f0e7,#dbe6dc);color:var(--accent);font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.pc-img-empty span{position:relative;z-index:1;padding:8px 12px;border:1px solid rgba(26,122,60,.22);background:rgba(255,255,255,.42)}
 .proj-card:hover .pc-img img,.proj-card.active .pc-img img{transform:scale(1.045);filter:saturate(1.06)}
 .pc-num{display:none}
 .proj-card:hover .pc-num,.proj-card.active .pc-num{color:#fff;transform:translateX(6px)}
@@ -181,6 +183,8 @@ body.hov #cur-dot{transform:translate(-50%,-50%) scale(1.4);background:var(--acc
 @keyframes projModalIn{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
 .proj-modal-img{height:min(30vh,260px);min-height:190px;position:relative;overflow:hidden;background:var(--fg)}
 .proj-modal-img img{width:100%;height:100%;object-fit:cover;display:block}
+.proj-modal-img.is-empty{display:none}
+.proj-modal-img.is-empty + .proj-modal-body{padding-top:70px}
 .proj-modal-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(15,14,11,.45) 100%)}
 .proj-modal-close{position:absolute;right:18px;top:18px;z-index:2;width:48px;height:48px;border:0;border-radius:50%;background:rgba(15,14,11,.58);color:#fff;font-size:30px;line-height:1;cursor:pointer;transition:background .2s,transform .2s}
 .proj-modal-close:hover{background:var(--accent);transform:scale(1.04)}
@@ -621,7 +625,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
           <div><div class="pc-tags"><span class="ptag">OpenCV</span><span class="ptag">Gemini 2.0</span><span class="ptag">Video AI</span></div><a href="https://humbeaniket2006-max.github.io/Brand_Ad_Video_Analyzer/" target="_blank" class="pc-link">Live Demo ↗</a></div>
         </div>
         <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview (12).jpeg" alt="CareCore preview"></div>
+          <div class="pc-img pc-img-empty" aria-label="CareCore has no thumbnail"><span>No thumbnail</span></div>
           <div class="pc-top"><div class="pc-num">04</div><h3>CareCore — Senior Living Digital Health Platform</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Ageing populations need coordinated digital health records across patients, caregivers, and doctors.</p><p class="pc-line"><strong>Solution</strong>Built a full-stack senior care platform with JWT auth, a 9-entity MongoDB model, and a live EHMR dashboard.</p><p class="pc-line"><strong>Result</strong>Deployed backend and frontend as a production-ready digital health demo.</p></div></div>
           <div><div class="pc-tags"><span class="ptag">Express.js</span><span class="ptag">MongoDB</span><span class="ptag">JWT Auth</span></div><a href="https://humbeaniket2006-max.github.io/EHMR/" target="_blank" class="pc-link">Live Demo ↗</a></div>
         </div>
@@ -666,7 +670,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
           <div><div class="pc-tags"><span class="ptag">Business Analysis</span><span class="ptag">Excel</span><span class="ptag">Strategy</span></div><a href="https://docs.google.com/spreadsheets/d/1OzKuAGhpYrolEEfIfbINNh3IFXDon0Z5nqAllidDF_Y/edit" target="_blank" class="pc-link">Excel Model ↗</a></div>
         </div>
         <div class="proj-card">
-          <div class="pc-img"><img src="assets/43db7355-d785-452a-a500-52829dc985bf.png" alt="SuryaGrid preview"></div>
+          <div class="pc-img"><img src="assets/preview (12).jpeg" alt="SuryaGrid preview"></div>
           <div class="pc-top"><div class="pc-num">13</div><h3>SuryaGrid</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Solar panels lose 15-25% efficiency due to dust accumulation.</p><p class="pc-line"><strong>Solution</strong>Built a smart solar panel system using IoT sensors and automated dust-cleaning actuators.</p><p class="pc-line"><strong>Result</strong>Won 3rd place at the SDG Hackathon.</p></div></div>
           <div><div class="pc-tags"><span class="ptag">IoT</span><span class="ptag">Automation</span><span class="ptag">Hardware</span></div></div>
         </div>
@@ -1025,6 +1029,7 @@ function setup(){
   (function(){
     const modal = document.getElementById('projModal');
     const modalImg = document.getElementById('projModalImg');
+    const modalImgWrap = modalImg ? modalImg.closest('.proj-modal-img') : null;
     const modalMeta = document.getElementById('projModalMeta');
     const modalTitle = document.getElementById('projModalTitle');
     const modalDesc = document.getElementById('projModalDesc');
@@ -1041,8 +1046,15 @@ function setup(){
       const lines = Array.from(card.querySelectorAll('.pc-line'));
       const links = Array.from(card.querySelectorAll('.pc-link'));
 
-      modalImg.src = img ? img.getAttribute('src') : '';
-      modalImg.alt = img ? img.alt : '';
+      if(img){
+        modalImg.src = img.getAttribute('src');
+        modalImg.alt = img.alt;
+        if(modalImgWrap) modalImgWrap.classList.remove('is-empty');
+      }else{
+        modalImg.removeAttribute('src');
+        modalImg.alt = '';
+        if(modalImgWrap) modalImgWrap.classList.add('is-empty');
+      }
       modalTitle.textContent = title ? title.textContent.trim() : 'Project';
       modalMeta.textContent = tags.slice(0,3).join(' · ');
       function cleanLine(line){
