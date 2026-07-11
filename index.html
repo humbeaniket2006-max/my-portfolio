@@ -22,16 +22,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Syne:wght@300;400;600;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
 <meta name="google-site-verification" content="29sN_veCHmu4bzgcG_2Z8W852dv-bRSHNLs8kkPaf7M" />
-  <style>
+<style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#f5f2eb; --bg2:#edeae2; --fg:#0f0e0b;
-  --muted:#6b6357; --muted2:#a09890;
-  --accent:#1a7a3c;
-  --border:rgba(15,14,11,.1); --card:#fff;
-  --serif:'Playfair Display',serif;
-  --sans:'Syne',sans-serif;
-  --mono:'DM Mono',monospace;
+--bg:#f5f2eb; --bg2:#edeae2; --fg:#0f0e0b;
+--muted:#6b6357; --muted2:#a09890;
+--accent:#1a7a3c;
+--border:rgba(15,14,11,.1); --card:#fff;
+--serif:'Playfair Display',serif;
+--sans:'Syne',sans-serif;
+--mono:'DM Mono',monospace;
 }
 html{background:var(--bg);scroll-behavior:smooth}
 body{background:var(--bg);color:var(--fg);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -75,9 +75,7 @@ body.hov #cur-dot{transform:translate(-50%,-50%) scale(1.4);background:var(--acc
 
 /* ── HERO ── */
 #hero{position:relative;height:100vh;overflow:hidden}
-.hero-visual{position:absolute;inset:0;overflow:hidden}
 .h-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;will-change:transform}
-.hero-image{display:block}
 .h-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(15,14,11,.22) 0%,rgba(15,14,11,.08) 35%,rgba(15,14,11,.48) 70%,rgba(15,14,11,.86) 100%)}
 .h-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 52px 60px}
 .h-top-row{position:absolute;top:0;left:0;right:0;padding:100px 52px 0;display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none}
@@ -285,53 +283,53 @@ footer span{font-size:9px;color:rgba(245,242,235,.22);letter-spacing:.12em;font-
 body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.018;pointer-events:none;z-index:9997}
 
 @media(max-width:900px){
-  #nav{padding:16px 22px}
-  .nav-logo{width:74px;height:40px}
-  .nav-links a:not(.nav-cta){display:none}
-  .h-content{padding:0 22px 44px}
-  .h-top-row{padding:90px 22px 0}
-  .h-bot{flex-direction:column;align-items:flex-start;gap:18px}
-  #about{grid-template-columns:1fr;padding:72px 22px;gap:36px}
-  #proj-wrapper{padding:72px 0 56px}
-  .proj-hdr{flex-direction:column;align-items:flex-start;gap:22px}
-  .proj-hdr,.proj-track-wrap{padding-left:22px;padding-right:22px}
-  .proj-stats{width:100%;grid-template-columns:repeat(3,1fr);display:grid}
-  .proj-stat{min-width:0}
-  #journey{padding:72px 22px}
-  .jrn-hdr{flex-direction:column;align-items:flex-start;gap:12px}
-  .jrn-grid{grid-template-columns:1fr}
-  #skills{padding:72px 22px}
-  .sk-row{grid-template-columns:140px 1fr 46px;gap:16px}
-  #awards{padding:0 22px 72px}
-  .aw-grid{grid-template-columns:1fr}
-  #contact{padding:60px 22px;min-height:auto}
-  .ct-body{flex-direction:column;align-items:flex-start;gap:30px}
-  .ct-title{font-size:clamp(40px,12vw,126px)}
-  footer{padding:14px 22px;flex-direction:column;gap:5px;text-align:center}
-  .proj-hdr,.proj-track-wrap{padding-left:16px;padding-right:16px}
-  .proj-card{width:min(280px,84vw);min-height:350px}
-  .proj-modal{padding:12px 12px 36px}
-  .proj-modal-card{border-radius:22px}
-  .proj-modal-img{height:28vh;min-height:180px}
-  .proj-modal-close{right:14px;top:14px;width:44px;height:44px;font-size:28px}
-  .proj-modal-body{padding:24px 22px 32px}
-  .proj-modal-meta{font-size:10px;margin-bottom:12px}
-  .proj-modal-desc{font-size:15px;margin-bottom:18px}
-  .proj-modal-list li{font-size:14px;padding-left:42px}
-  .proj-modal-list li::before{width:26px}
+#nav{padding:16px 22px}
+.nav-logo{width:74px;height:40px}
+.nav-links a:not(.nav-cta){display:none}
+.h-content{padding:0 22px 44px}
+.h-top-row{padding:90px 22px 0}
+.h-bot{flex-direction:column;align-items:flex-start;gap:18px}
+#about{grid-template-columns:1fr;padding:72px 22px;gap:36px}
+#proj-wrapper{padding:72px 0 56px}
+.proj-hdr{flex-direction:column;align-items:flex-start;gap:22px}
+.proj-hdr,.proj-track-wrap{padding-left:22px;padding-right:22px}
+.proj-stats{width:100%;grid-template-columns:repeat(3,1fr);display:grid}
+.proj-stat{min-width:0}
+#journey{padding:72px 22px}
+.jrn-hdr{flex-direction:column;align-items:flex-start;gap:12px}
+.jrn-grid{grid-template-columns:1fr}
+#skills{padding:72px 22px}
+.sk-row{grid-template-columns:140px 1fr 46px;gap:16px}
+#awards{padding:0 22px 72px}
+.aw-grid{grid-template-columns:1fr}
+#contact{padding:60px 22px;min-height:auto}
+.ct-body{flex-direction:column;align-items:flex-start;gap:30px}
+.ct-title{font-size:clamp(40px,12vw,126px)}
+footer{padding:14px 22px;flex-direction:column;gap:5px;text-align:center}
+.proj-hdr,.proj-track-wrap{padding-left:16px;padding-right:16px}
+.proj-card{width:min(280px,84vw);min-height:350px}
+.proj-modal{padding:12px 12px 36px}
+.proj-modal-card{border-radius:22px}
+.proj-modal-img{height:28vh;min-height:180px}
+.proj-modal-close{right:14px;top:14px;width:44px;height:44px;font-size:28px}
+.proj-modal-body{padding:24px 22px 32px}
+.proj-modal-meta{font-size:10px;margin-bottom:12px}
+.proj-modal-desc{font-size:15px;margin-bottom:18px}
+.proj-modal-list li{font-size:14px;padding-left:42px}
+.proj-modal-list li::before{width:26px}
 }
 
 @media(max-width:480px){
-  .h-title{font-size:clamp(48px,14vw,80px)}
-  .about-big{font-size:clamp(30px,10vw,50px)}
-  .about-txt{font-size:15px;line-height:1.78}
-  .jrn-h2{font-size:clamp(30px,10vw,50px)}
-  .sk-h2{font-size:clamp(30px,10vw,50px)}
-  .aw-h2{font-size:clamp(30px,10vw,50px)}
-  .sk-row{grid-template-columns:100px 1fr 40px;gap:10px}
-  .sk-nm{font-size:12px}
-  .stats-grid{grid-template-columns:1fr}
-  .snum{font-size:36px}
+.h-title{font-size:clamp(48px,14vw,80px)}
+.about-big{font-size:clamp(30px,10vw,50px)}
+.about-txt{font-size:15px;line-height:1.78}
+.jrn-h2{font-size:clamp(30px,10vw,50px)}
+.sk-h2{font-size:clamp(30px,10vw,50px)}
+.aw-h2{font-size:clamp(30px,10vw,50px)}
+.sk-row{grid-template-columns:100px 1fr 40px;gap:10px}
+.sk-nm{font-size:12px}
+.stats-grid{grid-template-columns:1fr}
+.snum{font-size:36px}
 }
 
 /* ── CLICKABLE AWARD NAMES ── */
@@ -402,14 +400,14 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 /* ── PROJ CARD SHIMMER LINE ── */
 /* ── PROJ CARD SHIMMER LINE ── */
 .proj-card::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(135deg,transparent 40%,rgba(26,122,60,.055) 50%,transparent 60%);
-  background-size:200% 200%;
-  opacity:0;
-  transition:opacity .3s;
-  pointer-events: none; /* <-- Add this line */
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(135deg,transparent 40%,rgba(26,122,60,.055) 50%,transparent 60%);
+background-size:200% 200%;
+opacity:0;
+transition:opacity .3s;
+pointer-events: none; /* <-- Add this line */
 }.proj-card:hover::after{opacity:1;animation:cardShimmer .7s ease}
 @keyframes cardShimmer{from{background-position:200% 200%}to{background-position:-200% -200%}}
 
@@ -441,11 +439,11 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 #nav-mobile a{font-family:var(--serif);font-size:clamp(28px,6vw,48px);font-weight:900;color:var(--bg);font-style:italic;letter-spacing:-.01em;transition:color .2s}
 #nav-mobile a:hover{color:rgba(26,122,60,.8)}
 @media(max-width:900px){
-  #nav-toggle{display:block;color:rgba(255,255,255,.8)}
-  #nav.scrolled #nav-toggle{color:var(--fg)}
-  .nav-links{display:none}
-  #nav-mobile{display:flex}
-  #nav-mobile:not(.open){pointer-events:none}
+#nav-toggle{display:block;color:rgba(255,255,255,.8)}
+#nav.scrolled #nav-toggle{color:var(--fg)}
+.nav-links{display:none}
+#nav-mobile{display:flex}
+#nav-mobile:not(.open){pointer-events:none}
 }
 
 /* ── HERO SCROLL CUE BOUNCE ── */
@@ -460,21 +458,21 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 
 /* ── PROJ CAROUSEL MOBILE ── */
 @media(max-width:900px){
-  #proj-wrapper{padding:60px 22px 52px}
-  .proj-track-wrap{margin:0 -22px;padding:24px 22px 40px;-webkit-mask-image:none;mask-image:none}
-  .proj-card{width:calc((100% - 24px) / 2)!important;min-width:200px}
+#proj-wrapper{padding:60px 22px 52px}
+.proj-track-wrap{margin:0 -22px;padding:24px 22px 40px;-webkit-mask-image:none;mask-image:none}
+.proj-card{width:calc((100% - 24px) / 2)!important;min-width:200px}
 }
 @media(max-width:600px){
-  #proj-wrapper{padding:60px 16px 48px}
-  .proj-hdr{gap:28px}
-  .proj-track-wrap{margin:0 -16px;padding:22px 16px 38px}
-  .proj-stats{grid-template-columns:1fr}
-  .proj-card{width:100%!important}
+#proj-wrapper{padding:60px 16px 48px}
+.proj-hdr{gap:28px}
+.proj-track-wrap{margin:0 -16px;padding:22px 16px 38px}
+.proj-stats{grid-template-columns:1fr}
+.proj-card{width:100%!important}
 }
 @media(prefers-reduced-motion:reduce){
-  #proj-wrapper::after{animation:none}
-  .proj-track,.proj-card,.text-motion,.text-group-motion{transition:none}
-  .motion-headline.in em{animation:none}
+#proj-wrapper::after{animation:none}
+.proj-track,.proj-card,.text-motion,.text-group-motion{transition:none}
+.motion-headline.in em{animation:none}
 }
 </style>
 <script type="application/ld+json">
@@ -650,328 +648,326 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 
 <!-- PRELOADER -->
 <div id="preloader">
-  <div class="pl-name">Aniket Humbe</div>
-  <div class="pl-bar-wrap"><div class="pl-bar" id="plbar"></div></div>
-  <div class="pl-pct" id="plpct">0%</div>
-  <div class="pl-wipe" id="plwipe"></div>
+<div class="pl-name">Aniket Humbe</div>
+<div class="pl-bar-wrap"><div class="pl-bar" id="plbar"></div></div>
+<div class="pl-pct" id="plpct">0%</div>
+<div class="pl-wipe" id="plwipe"></div>
 </div>
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="#hero" class="nav-logo" aria-label="Aniket Humbe home">
-    <img class="logo-light" src="assets/logo.png" alt="Aniket Humbe logo">
-    <img class="logo-dark" src="assets/logo-black.png" alt="" aria-hidden="true">
-  </a>
-  <button id="nav-toggle" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
-  <div id="nav-mobile">
-    <a href="#about" onclick="closeMobileNav()">About</a>
-    <a href="#proj-wrapper" onclick="closeMobileNav()">Work</a>
-    <a href="#journey" onclick="closeMobileNav()">Journey</a>
-    <a href="#skills" onclick="closeMobileNav()">Skills</a>
-    <a href="#contact" onclick="closeMobileNav()">Contact</a>
-  </div>
-  <div class="nav-links">
-    <a href="#proj-wrapper">Work</a>
-    <a href="#journey">Journey</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact" class="nav-cta">Contact</a>
-  </div>
+<a href="#hero" class="nav-logo" aria-label="Aniket Humbe home">
+<img class="logo-light" src="assets/logo.png" alt="Aniket Humbe logo">
+<img class="logo-dark" src="assets/logo-black.png" alt="" aria-hidden="true">
+</a>
+<button id="nav-toggle" aria-label="Open menu">
+<span></span><span></span><span></span>
+</button>
+<div id="nav-mobile">
+<a href="#about" onclick="closeMobileNav()">About</a>
+<a href="#proj-wrapper" onclick="closeMobileNav()">Work</a>
+<a href="#journey" onclick="closeMobileNav()">Journey</a>
+<a href="#skills" onclick="closeMobileNav()">Skills</a>
+<a href="#contact" onclick="closeMobileNav()">Contact</a>
+</div>
+<div class="nav-links">
+<a href="#proj-wrapper">Work</a>
+<a href="#journey">Journey</a>
+<a href="#skills">Skills</a>
+<a href="#contact" class="nav-cta">Contact</a>
+</div>
 </nav>
 
 <!-- ══ HERO ══ -->
 <section id="hero">
-  <div class="hero-visual">
-    <img id="hImg" class="h-img hero-image" src="assets/hero-image.jpg" alt="Aniket Humbe hero portrait">
-  </div>
-  <div class="h-overlay"></div>
+<video id="hImg" class="h-img" src="assets/intro-video.mp4" autoplay muted loop playsinline preload="auto" aria-label="Aniket Humbe intro video"></video>
+<div class="h-overlay"></div>
 
-  <!-- subtle ambient top info - parallax layer 1 (slowest) -->
-  <div class="h-top-row" id="hLayer1">
-    <div class="h-tag-left">
-      <span class="acc">// 2025</span>
-      <span>IIT Madras · Data Science</span>
-      <span>IVB · Venture Builder</span>
-    </div>
-    <div class="h-tag-right">Intel OpenVINO™ Contributor<br/>West Zone Olympiad — 1st</div>
-  </div>
+<!-- subtle ambient top info - parallax layer 1 (slowest) -->
+<div class="h-top-row" id="hLayer1">
+<div class="h-tag-left">
+<span class="acc">// 2025</span>
+<span>IIT Madras · Data Science</span>
+<span>IVB · Venture Builder</span>
+</div>
+<div class="h-tag-right">Intel OpenVINO™ Contributor<br/>West Zone Olympiad — 1st</div>
+</div>
 
-  <div class="h-content">
-    <!-- Main title - parallax layer 2 -->
-    <div class="h-main" id="hLayer2">
-      <h1 class="h-title">
-        <span class="h-line"><span class="h-li" id="hL1">Aniket</span></span>
-        <span class="h-line"><span class="h-li" id="hL2"><em>Humbe</em></span></span>
-      </h1>
-      <div class="h-sub" id="hSub">IIT Madras · Intel OpenVINO™ Contributor · AI/ML Developer</div>
-    </div>
+<div class="h-content">
+<!-- Main title - parallax layer 2 -->
+<div class="h-main" id="hLayer2">
+<h1 class="h-title">
+<span class="h-line"><span class="h-li" id="hL1">Aniket</span></span>
+<span class="h-line"><span class="h-li" id="hL2"><em>Humbe</em></span></span>
+</h1>
+<div class="h-sub" id="hSub">IIT Madras · Intel OpenVINO™ Contributor · AI/ML Developer</div>
+</div>
 
-    <!-- Bottom row - parallax layer 3 -->
-    <div class="h-bot" id="hLayer3">
-      <div class="h-desc">
-       <!-- <strong>IIT Madras</strong> + <strong>IVB</strong> — building scalable AI<br/>solutions for real-world impact.<br/> -->
-        <span style="margin-top:6px;display:block">Chennai, India · Open to opportunities</span> 
-      </div>
-      <div class="h-actions">
-        <a href="#proj-wrapper" class="h-btn">View Work ↗</a>
-        <div class="scroll-cue">Scroll to explore</div>
-      </div>
-    </div>
-  </div>
+<!-- Bottom row - parallax layer 3 -->
+<div class="h-bot" id="hLayer3">
+<div class="h-desc">
+<!-- <strong>IIT Madras</strong> + <strong>IVB</strong> — building scalable AI<br/>solutions for real-world impact.<br/> -->
+<span style="margin-top:6px;display:block">Chennai, India · Open to opportunities</span> 
+</div>
+<div class="h-actions">
+<a href="#proj-wrapper" class="h-btn">View Work ↗</a>
+<div class="scroll-cue">Scroll to explore</div>
+</div>
+</div>
+</div>
 
-  <div class="scroll-ind">
-    <span>Scroll</span>
-    <div class="scroll-ind-line"></div>
-  </div>
+<div class="scroll-ind">
+<span>Scroll</span>
+<div class="scroll-ind-line"></div>
+</div>
 </section>
 
 <!-- MARQUEE 1 -->
 <div class="marq">
-  <div class="marq-t">
-    <span class="marq-item">Data Science</span><span class="marq-item a">·</span><span class="marq-item">Machine Learning</span><span class="marq-item a">·</span><span class="marq-item">AI Engineering</span><span class="marq-item a">·</span><span class="marq-item">Venture Builder</span><span class="marq-item a">·</span><span class="marq-item">Intel OpenVINO™</span><span class="marq-item a">·</span><span class="marq-item">Hackathon Winner</span><span class="marq-item a">·</span><span class="marq-item">IIT Madras</span><span class="marq-item a">·</span><span class="marq-item">West Zone Olympiad</span><span class="marq-item a">·</span><span class="marq-item">Data Science</span><span class="marq-item a">·</span><span class="marq-item">Machine Learning</span><span class="marq-item a">·</span><span class="marq-item">AI Engineering</span><span class="marq-item a">·</span><span class="marq-item">Venture Builder</span><span class="marq-item a">·</span><span class="marq-item">Intel OpenVINO™</span><span class="marq-item a">·</span><span class="marq-item">Hackathon Winner</span><span class="marq-item a">·</span><span class="marq-item">IIT Madras</span><span class="marq-item a">·</span><span class="marq-item">West Zone Olympiad</span><span class="marq-item a">·</span>
-  </div>
+<div class="marq-t">
+<span class="marq-item">Data Science</span><span class="marq-item a">·</span><span class="marq-item">Machine Learning</span><span class="marq-item a">·</span><span class="marq-item">AI Engineering</span><span class="marq-item a">·</span><span class="marq-item">Venture Builder</span><span class="marq-item a">·</span><span class="marq-item">Intel OpenVINO™</span><span class="marq-item a">·</span><span class="marq-item">Hackathon Winner</span><span class="marq-item a">·</span><span class="marq-item">IIT Madras</span><span class="marq-item a">·</span><span class="marq-item">West Zone Olympiad</span><span class="marq-item a">·</span><span class="marq-item">Data Science</span><span class="marq-item a">·</span><span class="marq-item">Machine Learning</span><span class="marq-item a">·</span><span class="marq-item">AI Engineering</span><span class="marq-item a">·</span><span class="marq-item">Venture Builder</span><span class="marq-item a">·</span><span class="marq-item">Intel OpenVINO™</span><span class="marq-item a">·</span><span class="marq-item">Hackathon Winner</span><span class="marq-item a">·</span><span class="marq-item">IIT Madras</span><span class="marq-item a">·</span><span class="marq-item">West Zone Olympiad</span><span class="marq-item a">·</span>
+</div>
 </div>
 
 <!-- ABOUT -->
 <section id="about">
-  <div>
-    <div class="sec-tag rfade">About</div>
-    <div class="about-big sec-reveal-left">
-      <span class="cr"><span class="ci">Building the</span></span>
-      <span class="cr"><span class="ci"><em>future,</em></span></span>
-      <span class="cr"><span class="ci">one model</span></span>
-      <span class="cr"><span class="ci">at a time.</span></span>
-    </div>
-  </div>
-  <div>
-    <p class="about-txt sec-reveal delay-2">I'm <strong>Aniket Humbe</strong> — a Data Science student at <strong>IIT Madras</strong> and entrepreneurship student at the <strong>Institute of Venture Building</strong>. I build AI systems that solve real problems, from edge-optimized computer vision to conversational AI on national government platforms.</p>
-    <p class="about-txt sec-reveal delay-3">An <strong>Intel OpenVINO™ contributor</strong>, West Zone <strong>Olympiad Ranker (1st, International Rank 15)</strong>, and two-time <strong>hackathon winner</strong>.</p>
-    <div class="stats-grid sec-reveal delay-3">
-      <div class="sbox"><div class="snum">6<em>+</em></div><div class="slbl">Live Projects</div></div>
-      <div class="sbox"><div class="snum">2<em>×</em></div><div class="slbl">Hackathon Wins</div></div>
-      <div class="sbox" style="border-top:1px solid var(--border)"><div class="snum">1<em>st</em></div><div class="slbl">West Zone Olympiad</div></div>
-      <div class="sbox" style="border-top:1px solid var(--border)"><div class="snum">15<em>th</em></div><div class="slbl">International Rank CS</div></div>
-    </div>
-  </div>
+<div>
+<div class="sec-tag rfade">About</div>
+<div class="about-big sec-reveal-left">
+<span class="cr"><span class="ci">Building the</span></span>
+<span class="cr"><span class="ci"><em>future,</em></span></span>
+<span class="cr"><span class="ci">one model</span></span>
+<span class="cr"><span class="ci">at a time.</span></span>
+</div>
+</div>
+<div>
+<p class="about-txt sec-reveal delay-2">I'm <strong>Aniket Humbe</strong> — a Data Science student at <strong>IIT Madras</strong> and entrepreneurship student at the <strong>Institute of Venture Building</strong>. I build AI systems that solve real problems, from edge-optimized computer vision to conversational AI on national government platforms.</p>
+<p class="about-txt sec-reveal delay-3">An <strong>Intel OpenVINO™ contributor</strong>, West Zone <strong>Olympiad Ranker (1st, International Rank 15)</strong>, and two-time <strong>hackathon winner</strong>.</p>
+<div class="stats-grid sec-reveal delay-3">
+<div class="sbox"><div class="snum">6<em>+</em></div><div class="slbl">Live Projects</div></div>
+<div class="sbox"><div class="snum">2<em>×</em></div><div class="slbl">Hackathon Wins</div></div>
+<div class="sbox" style="border-top:1px solid var(--border)"><div class="snum">1<em>st</em></div><div class="slbl">West Zone Olympiad</div></div>
+<div class="sbox" style="border-top:1px solid var(--border)"><div class="snum">15<em>th</em></div><div class="slbl">International Rank CS</div></div>
+</div>
+</div>
 </section>
 
 <!-- HORIZONTAL PROJECTS -->
 <div id="proj-wrapper">
-  <div class="proj-hdr">
-    <div>
-      <div class="sec-tag" style="margin-bottom:6px">Selected Work</div>
-      <h2>My <em>Projects</em></h2>
-      <p class="proj-intro">A focused mix of AI systems, civic-tech tools, no-code products, AR prototypes, and strategy work. Each project is framed by the problem, the solution I built, and the measurable result.</p>
-    </div>
-    <div>
-      <div class="proj-stats">
-        <div class="proj-stat"><strong>14</strong><span>Projects</span></div>
-        <div class="proj-stat"><strong>6+</strong><span>Live Builds</span></div>
-        <div class="proj-stat"><strong>4x</strong><span>Edge Speedup</span></div>
-      </div>
-      <div class="proj-kicker" style="margin-top:12px;text-align:right">Use ← → keys or arrows</div>
-    </div>
-  </div>
-  <div class="proj-carousel">
-    <div class="proj-track-wrap">
-      <div class="proj-track" id="projtrack">
-        <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview (1).jpeg" alt="JCAS AI preview"></div>
-          <div class="pc-top"><div class="pc-num">00</div><h3>JCAS AI — Japan Care AI System</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Japan faces a critical caregiving shortage, with Kaigo Hoken covering millions and demand exceeding available caregivers.</p><p class="pc-line"><strong>Solution</strong>Built a Japan-specific elderly care AI system combining health monitoring, caregiver workflow automation, and family notifications.</p><p class="pc-line"><strong>Result</strong>Designed as a pre-application Society 5.0 project aligned with Japan's aging population challenge.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">Society 5.0</span><span class="ptag">Edge AI</span><span class="ptag">Health</span></div><a href="https://humbeaniket2006-max.github.io/JCAS_AI/" target="_blank" class="pc-link">Live App ↗</a></div>
-        </div>
-        <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview.jpeg" alt="ShopSense AR preview"></div>
-          <div class="pc-top"><div class="pc-num">01</div><h3>ShopSense AR</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>In-store shoppers lack instant product context and recommendations at the shelf.</p><p class="pc-line"><strong>Solution</strong>Designed an AR shopping experience that overlays product recommendations using computer vision.</p><p class="pc-line"><strong>Result</strong>Selected as a finalist at the American Center Innovation Challenge with Snap Inc. and TheNeural.ai.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">Computer Vision</span><span class="ptag">AR</span><span class="ptag">Snap Lens</span></div></div>
-        </div>
-        <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview (2).jpeg" alt="Ocular-Core Lite preview"></div>
-          <div class="pc-top"><div class="pc-num">02</div><h3>Ocular-Core Lite</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Generative AI image pipelines often need GPUs, limiting edge deployment.</p><p class="pc-line"><strong>Solution</strong>Optimised Stable Diffusion image generation for Intel CPUs using OpenVINO FP16 quantisation and LCM-LoRA.</p><p class="pc-line"><strong>Result</strong>Achieved 3x faster inference than baseline PyTorch for GPU-free generation.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">Python</span><span class="ptag">OpenVINO</span><span class="ptag">LCM-LoRA</span></div><a href="https://github.com/humbeaniket2006-max/Ocular_Core_Lite" target="_blank" class="pc-link">GitHub ↗</a><a href="https://github.com/openvinotoolkit/openvino/pulls" target="_blank" class="pc-link">Intel PR ↗</a></div>
-        </div>
-        <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview (3).jpeg" alt="Brand Ad Video Analyzer preview"></div>
-          <div class="pc-top"><div class="pc-num">03</div><h3>Brand Ad Video Analyzer</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Marketing teams manually audit ad footage for brand visibility and sentiment.</p><p class="pc-line"><strong>Solution</strong>Built an automated analyser using OpenCV and Gemini 2.0 Flash Lite for video-based brand detection.</p><p class="pc-line"><strong>Result</strong>Reduces manual ad review time by about 80%.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">OpenCV</span><span class="ptag">Gemini 2.0</span><span class="ptag">Video AI</span></div><a href="https://humbeaniket2006-max.github.io/Brand_Ad_Video_Analyzer/" target="_blank" class="pc-link">Live Demo ↗</a></div>
-        </div>
-        <div class="proj-card">
-          <div class="pc-img pc-img-empty" aria-label="CareCore has no thumbnail"><span>No thumbnail</span></div>
-          <div class="pc-top"><div class="pc-num">04</div><h3>CareCore — Senior Living Digital Health Platform</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Ageing populations need coordinated digital health records across patients, caregivers, and doctors.</p><p class="pc-line"><strong>Solution</strong>Built a full-stack senior care platform with JWT auth, a 9-entity MongoDB model, and a live EHMR dashboard.</p><p class="pc-line"><strong>Result</strong>Deployed backend and frontend as a production-ready digital health demo.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">Express.js</span><span class="ptag">MongoDB</span><span class="ptag">JWT Auth</span></div><a href="https://humbeaniket2006-max.github.io/EHMR/" target="_blank" class="pc-link">Live Demo ↗</a></div>
-        </div>
-        <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview (4).jpeg" alt="AEO GEO Sales Agent preview"></div>
-          <div class="pc-top"><div class="pc-num">05</div><h3>AEO/GEO Sales Agent</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Sales teams spend hours researching prospects and preparing company-specific AI visibility pitches.</p><p class="pc-line"><strong>Solution</strong>Developed a 7-stage AI sales pipeline that audits AI search visibility, generates pitch decks, and drafts outreach.</p><p class="pc-line"><strong>Result</strong>Reduced sales research time from 4 hours to under 10 minutes per prospect.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">Streamlit</span><span class="ptag">Groq</span><span class="ptag">Sales AI</span></div><a href="https://aeo-geosalesagent-dfdfr4rmksn56bbpuuvty7.streamlit.app/" target="_blank" class="pc-link">Live App ↗</a></div>
-        </div>
-        <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview (5).jpeg" alt="Business Strategy Analyser preview"></div>
-          <div class="pc-top"><div class="pc-num">06</div><h3>Business Strategy Analyser</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>SMEs and early-stage teams need structured strategy analysis without slow consulting cycles.</p><p class="pc-line"><strong>Solution</strong>Built an AI strategy tool using Claude API with SWOT, Porter's Five Forces, and PTCF frameworks.</p><p class="pc-line"><strong>Result</strong>Produces management-consulting style analysis in under 60 seconds.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">Claude API</span><span class="ptag">Strategy</span><span class="ptag">SME AI</span></div></div>
-        </div>
-        <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview (6).jpeg" alt="Stock Forecaster preview"></div>
-          <div class="pc-top"><div class="pc-num">07</div><h3>Stock Forecaster</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Stock prediction models often ignore multi-indicator market signals.</p><p class="pc-line"><strong>Solution</strong>Built an ensemble regression model using time-series data, technical indicators, and IndusInd Bank analysis.</p><p class="pc-line"><strong>Result</strong>Produced actionable buy/hold signals tested against real market data.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">Data Science</span><span class="ptag">Pandas</span><span class="ptag">Scikit-learn</span></div></div>
-        </div>
-        <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview (7).jpeg" alt="SubTracker preview"></div>
-          <div class="pc-top"><div class="pc-num">08</div><h3>SubTracker</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>People lose track of recurring subscriptions and overspend monthly.</p><p class="pc-line"><strong>Solution</strong>Built a no-code subscription manager on Bubble.io with spending tracking and renewal reminders.</p><p class="pc-line"><strong>Result</strong>Launched a live app with user auth and real data persistence.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">Bubble.io</span><span class="ptag">No-Code</span><span class="ptag">FinTech</span></div><a href="https://humbeaniket2006-18289.bubbleapps.io/version-test/login" target="_blank" class="pc-link">Live App ↗</a></div>
-        </div>
-        <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview (8).jpeg" alt="DeskFlow preview"></div>
-          <div class="pc-top"><div class="pc-num">09</div><h3>DeskFlow</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Productivity tools were either too complex or too limited for student workflows.</p><p class="pc-line"><strong>Solution</strong>Built a Bubble.io task management platform with boards, priority tagging, and workflow automation.</p><p class="pc-line"><strong>Result</strong>Published a live, publicly accessible productivity tool.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">Bubble.io</span><span class="ptag">No-Code</span><span class="ptag">Productivity</span></div><a href="https://humbeaniket2006-66016.bubbleapps.io/version-test" target="_blank" class="pc-link">Live App ↗</a></div>
-        </div>
-        <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview (9).jpeg" alt="MSME Data Index preview"></div>
-          <div class="pc-top"><div class="pc-num">10</div><h3>MSME Data Index</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>India's MSME data was fragmented across 6+ government portals with no searchable index.</p><p class="pc-line"><strong>Solution</strong>Built a Python scraper plus Gemini scoring pipeline for government datasets.</p><p class="pc-line"><strong>Result</strong>Delivered usability scores, TAM/SAM analysis, and a live searchable demo.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">Python</span><span class="ptag">Gemini API</span><span class="ptag">Civic Tech</span></div><a href="https://humbeaniket2006-max.github.io/MSME-Data-Index/" target="_blank" class="pc-link">Case Study ↗</a></div>
-        </div>
-        <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview (10).jpeg" alt="CyberShield preview"></div>
-          <div class="pc-top"><div class="pc-num">11</div><h3>CyberShield</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Families had no unified mobile tool for real-time digital threat protection.</p><p class="pc-line"><strong>Solution</strong>Built a security app with threat detection, monitoring dashboards, and parental controls.</p><p class="pc-line"><strong>Result</strong>Won Cyber Pitch against competing teams.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">Mobile</span><span class="ptag">Security</span><span class="ptag">App Dev</span></div><a href="https://lovable.dev/projects/19a18a87-a751-4404-a5f2-422c5c1dbde7" target="_blank" class="pc-link">Details ↗</a></div>
-        </div>
-        <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview (11).jpeg" alt="OOHO Build vs Buy preview"></div>
-          <div class="pc-top"><div class="pc-num">12</div><h3>OOHO Build vs Buy</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>OOHO needed a structured cost model to decide whether to build or outsource a productivity platform.</p><p class="pc-line"><strong>Solution</strong>Led a case study evaluating vendors, year-wise costs, exit clauses, and contract risk.</p><p class="pc-line"><strong>Result</strong>Recommended in-house development at Rs. 23.54L over 5 years.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">Business Analysis</span><span class="ptag">Excel</span><span class="ptag">Strategy</span></div><a href="https://docs.google.com/spreadsheets/d/1OzKuAGhpYrolEEfIfbINNh3IFXDon0Z5nqAllidDF_Y/edit" target="_blank" class="pc-link">Excel Model ↗</a></div>
-        </div>
-        <div class="proj-card">
-          <div class="pc-img"><img src="assets/preview (12).jpeg" alt="SuryaGrid preview"></div>
-          <div class="pc-top"><div class="pc-num">13</div><h3>SuryaGrid</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Solar panels lose 15-25% efficiency due to dust accumulation.</p><p class="pc-line"><strong>Solution</strong>Built a smart solar panel system using IoT sensors and automated dust-cleaning actuators.</p><p class="pc-line"><strong>Result</strong>Won 3rd place at the SDG Hackathon.</p></div></div>
-          <div><div class="pc-tags"><span class="ptag">IoT</span><span class="ptag">Automation</span><span class="ptag">Hardware</span></div></div>
-        </div>
+<div class="proj-hdr">
+<div>
+<div class="sec-tag" style="margin-bottom:6px">Selected Work</div>
+<h2>My <em>Projects</em></h2>
+<p class="proj-intro">A focused mix of AI systems, civic-tech tools, no-code products, AR prototypes, and strategy work. Each project is framed by the problem, the solution I built, and the measurable result.</p>
 </div>
-    </div>
-    <div class="proj-controls">
-      <button class="proj-arrow" id="projPrev" aria-label="Previous">&#8592;</button>
-      <div class="proj-dots" id="projDots"></div>
-      <button class="proj-arrow" id="projNext" aria-label="Next">&#8594;</button>
-    </div>
-  </div>
+<div>
+<div class="proj-stats">
+<div class="proj-stat"><strong>14</strong><span>Projects</span></div>
+<div class="proj-stat"><strong>6+</strong><span>Live Builds</span></div>
+<div class="proj-stat"><strong>4x</strong><span>Edge Speedup</span></div>
+</div>
+<div class="proj-kicker" style="margin-top:12px;text-align:right">Use ← → keys or arrows</div>
+</div>
+</div>
+<div class="proj-carousel">
+<div class="proj-track-wrap">
+<div class="proj-track" id="projtrack">
+<div class="proj-card">
+<div class="pc-img"><img src="assets/preview (1).jpeg" alt="JCAS AI preview"></div>
+<div class="pc-top"><div class="pc-num">00</div><h3>JCAS AI — Japan Care AI System</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Japan faces a critical caregiving shortage, with Kaigo Hoken covering millions and demand exceeding available caregivers.</p><p class="pc-line"><strong>Solution</strong>Built a Japan-specific elderly care AI system combining health monitoring, caregiver workflow automation, and family notifications.</p><p class="pc-line"><strong>Result</strong>Designed as a pre-application Society 5.0 project aligned with Japan's aging population challenge.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">Society 5.0</span><span class="ptag">Edge AI</span><span class="ptag">Health</span></div><a href="https://humbeaniket2006-max.github.io/JCAS_AI/" target="_blank" class="pc-link">Live App ↗</a></div>
+</div>
+<div class="proj-card">
+<div class="pc-img"><img src="assets/preview.jpeg" alt="ShopSense AR preview"></div>
+<div class="pc-top"><div class="pc-num">01</div><h3>ShopSense AR</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>In-store shoppers lack instant product context and recommendations at the shelf.</p><p class="pc-line"><strong>Solution</strong>Designed an AR shopping experience that overlays product recommendations using computer vision.</p><p class="pc-line"><strong>Result</strong>Selected as a finalist at the American Center Innovation Challenge with Snap Inc. and TheNeural.ai.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">Computer Vision</span><span class="ptag">AR</span><span class="ptag">Snap Lens</span></div></div>
+</div>
+<div class="proj-card">
+<div class="pc-img"><img src="assets/preview (2).jpeg" alt="Ocular-Core Lite preview"></div>
+<div class="pc-top"><div class="pc-num">02</div><h3>Ocular-Core Lite</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Generative AI image pipelines often need GPUs, limiting edge deployment.</p><p class="pc-line"><strong>Solution</strong>Optimised Stable Diffusion image generation for Intel CPUs using OpenVINO FP16 quantisation and LCM-LoRA.</p><p class="pc-line"><strong>Result</strong>Achieved 3x faster inference than baseline PyTorch for GPU-free generation.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">Python</span><span class="ptag">OpenVINO</span><span class="ptag">LCM-LoRA</span></div><a href="https://github.com/humbeaniket2006-max/Ocular_Core_Lite" target="_blank" class="pc-link">GitHub ↗</a><a href="https://github.com/openvinotoolkit/openvino/pulls" target="_blank" class="pc-link">Intel PR ↗</a></div>
+</div>
+<div class="proj-card">
+<div class="pc-img"><img src="assets/preview (3).jpeg" alt="Brand Ad Video Analyzer preview"></div>
+<div class="pc-top"><div class="pc-num">03</div><h3>Brand Ad Video Analyzer</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Marketing teams manually audit ad footage for brand visibility and sentiment.</p><p class="pc-line"><strong>Solution</strong>Built an automated analyser using OpenCV and Gemini 2.0 Flash Lite for video-based brand detection.</p><p class="pc-line"><strong>Result</strong>Reduces manual ad review time by about 80%.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">OpenCV</span><span class="ptag">Gemini 2.0</span><span class="ptag">Video AI</span></div><a href="https://humbeaniket2006-max.github.io/Brand_Ad_Video_Analyzer/" target="_blank" class="pc-link">Live Demo ↗</a></div>
+</div>
+<div class="proj-card">
+<div class="pc-img pc-img-empty" aria-label="CareCore has no thumbnail"><span>No thumbnail</span></div>
+<div class="pc-top"><div class="pc-num">04</div><h3>CareCore — Senior Living Digital Health Platform</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Ageing populations need coordinated digital health records across patients, caregivers, and doctors.</p><p class="pc-line"><strong>Solution</strong>Built a full-stack senior care platform with JWT auth, a 9-entity MongoDB model, and a live EHMR dashboard.</p><p class="pc-line"><strong>Result</strong>Deployed backend and frontend as a production-ready digital health demo.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">Express.js</span><span class="ptag">MongoDB</span><span class="ptag">JWT Auth</span></div><a href="https://humbeaniket2006-max.github.io/EHMR/" target="_blank" class="pc-link">Live Demo ↗</a></div>
+</div>
+<div class="proj-card">
+<div class="pc-img"><img src="assets/preview (4).jpeg" alt="AEO GEO Sales Agent preview"></div>
+<div class="pc-top"><div class="pc-num">05</div><h3>AEO/GEO Sales Agent</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Sales teams spend hours researching prospects and preparing company-specific AI visibility pitches.</p><p class="pc-line"><strong>Solution</strong>Developed a 7-stage AI sales pipeline that audits AI search visibility, generates pitch decks, and drafts outreach.</p><p class="pc-line"><strong>Result</strong>Reduced sales research time from 4 hours to under 10 minutes per prospect.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">Streamlit</span><span class="ptag">Groq</span><span class="ptag">Sales AI</span></div><a href="https://aeo-geosalesagent-dfdfr4rmksn56bbpuuvty7.streamlit.app/" target="_blank" class="pc-link">Live App ↗</a></div>
+</div>
+<div class="proj-card">
+<div class="pc-img"><img src="assets/preview (5).jpeg" alt="Business Strategy Analyser preview"></div>
+<div class="pc-top"><div class="pc-num">06</div><h3>Business Strategy Analyser</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>SMEs and early-stage teams need structured strategy analysis without slow consulting cycles.</p><p class="pc-line"><strong>Solution</strong>Built an AI strategy tool using Claude API with SWOT, Porter's Five Forces, and PTCF frameworks.</p><p class="pc-line"><strong>Result</strong>Produces management-consulting style analysis in under 60 seconds.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">Claude API</span><span class="ptag">Strategy</span><span class="ptag">SME AI</span></div></div>
+</div>
+<div class="proj-card">
+<div class="pc-img"><img src="assets/preview (6).jpeg" alt="Stock Forecaster preview"></div>
+<div class="pc-top"><div class="pc-num">07</div><h3>Stock Forecaster</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Stock prediction models often ignore multi-indicator market signals.</p><p class="pc-line"><strong>Solution</strong>Built an ensemble regression model using time-series data, technical indicators, and IndusInd Bank analysis.</p><p class="pc-line"><strong>Result</strong>Produced actionable buy/hold signals tested against real market data.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">Data Science</span><span class="ptag">Pandas</span><span class="ptag">Scikit-learn</span></div></div>
+</div>
+<div class="proj-card">
+<div class="pc-img"><img src="assets/preview (7).jpeg" alt="SubTracker preview"></div>
+<div class="pc-top"><div class="pc-num">08</div><h3>SubTracker</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>People lose track of recurring subscriptions and overspend monthly.</p><p class="pc-line"><strong>Solution</strong>Built a no-code subscription manager on Bubble.io with spending tracking and renewal reminders.</p><p class="pc-line"><strong>Result</strong>Launched a live app with user auth and real data persistence.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">Bubble.io</span><span class="ptag">No-Code</span><span class="ptag">FinTech</span></div><a href="https://humbeaniket2006-18289.bubbleapps.io/version-test/login" target="_blank" class="pc-link">Live App ↗</a></div>
+</div>
+<div class="proj-card">
+<div class="pc-img"><img src="assets/preview (8).jpeg" alt="DeskFlow preview"></div>
+<div class="pc-top"><div class="pc-num">09</div><h3>DeskFlow</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Productivity tools were either too complex or too limited for student workflows.</p><p class="pc-line"><strong>Solution</strong>Built a Bubble.io task management platform with boards, priority tagging, and workflow automation.</p><p class="pc-line"><strong>Result</strong>Published a live, publicly accessible productivity tool.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">Bubble.io</span><span class="ptag">No-Code</span><span class="ptag">Productivity</span></div><a href="https://humbeaniket2006-66016.bubbleapps.io/version-test" target="_blank" class="pc-link">Live App ↗</a></div>
+</div>
+<div class="proj-card">
+<div class="pc-img"><img src="assets/preview (9).jpeg" alt="MSME Data Index preview"></div>
+<div class="pc-top"><div class="pc-num">10</div><h3>MSME Data Index</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>India's MSME data was fragmented across 6+ government portals with no searchable index.</p><p class="pc-line"><strong>Solution</strong>Built a Python scraper plus Gemini scoring pipeline for government datasets.</p><p class="pc-line"><strong>Result</strong>Delivered usability scores, TAM/SAM analysis, and a live searchable demo.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">Python</span><span class="ptag">Gemini API</span><span class="ptag">Civic Tech</span></div><a href="https://humbeaniket2006-max.github.io/MSME-Data-Index/" target="_blank" class="pc-link">Case Study ↗</a></div>
+</div>
+<div class="proj-card">
+<div class="pc-img"><img src="assets/preview (10).jpeg" alt="CyberShield preview"></div>
+<div class="pc-top"><div class="pc-num">11</div><h3>CyberShield</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Families had no unified mobile tool for real-time digital threat protection.</p><p class="pc-line"><strong>Solution</strong>Built a security app with threat detection, monitoring dashboards, and parental controls.</p><p class="pc-line"><strong>Result</strong>Won Cyber Pitch against competing teams.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">Mobile</span><span class="ptag">Security</span><span class="ptag">App Dev</span></div><a href="https://lovable.dev/projects/19a18a87-a751-4404-a5f2-422c5c1dbde7" target="_blank" class="pc-link">Details ↗</a></div>
+</div>
+<div class="proj-card">
+<div class="pc-img"><img src="assets/preview (11).jpeg" alt="OOHO Build vs Buy preview"></div>
+<div class="pc-top"><div class="pc-num">12</div><h3>OOHO Build vs Buy</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>OOHO needed a structured cost model to decide whether to build or outsource a productivity platform.</p><p class="pc-line"><strong>Solution</strong>Led a case study evaluating vendors, year-wise costs, exit clauses, and contract risk.</p><p class="pc-line"><strong>Result</strong>Recommended in-house development at Rs. 23.54L over 5 years.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">Business Analysis</span><span class="ptag">Excel</span><span class="ptag">Strategy</span></div><a href="https://docs.google.com/spreadsheets/d/1OzKuAGhpYrolEEfIfbINNh3IFXDon0Z5nqAllidDF_Y/edit" target="_blank" class="pc-link">Excel Model ↗</a></div>
+</div>
+<div class="proj-card">
+<div class="pc-img"><img src="assets/preview (12).jpeg" alt="SuryaGrid preview"></div>
+<div class="pc-top"><div class="pc-num">13</div><h3>SuryaGrid</h3><div class="pc-story"><p class="pc-line"><strong>Problem</strong>Solar panels lose 15-25% efficiency due to dust accumulation.</p><p class="pc-line"><strong>Solution</strong>Built a smart solar panel system using IoT sensors and automated dust-cleaning actuators.</p><p class="pc-line"><strong>Result</strong>Won 3rd place at the SDG Hackathon.</p></div></div>
+<div><div class="pc-tags"><span class="ptag">IoT</span><span class="ptag">Automation</span><span class="ptag">Hardware</span></div></div>
+</div>
+</div>
+</div>
+<div class="proj-controls">
+<button class="proj-arrow" id="projPrev" aria-label="Previous">&#8592;</button>
+<div class="proj-dots" id="projDots"></div>
+<button class="proj-arrow" id="projNext" aria-label="Next">&#8594;</button>
+</div>
+</div>
 </div>
 <div class="proj-modal" id="projModal" aria-hidden="true">
-  <article class="proj-modal-card" role="dialog" aria-modal="true" aria-labelledby="projModalTitle">
-    <button class="proj-modal-close" id="projModalClose" type="button" aria-label="Close project details">&times;</button>
-    <div class="proj-modal-img"><img id="projModalImg" src="" alt=""></div>
-    <div class="proj-modal-body">
-      <div class="proj-modal-meta" id="projModalMeta"></div>
-      <h3 class="proj-modal-title" id="projModalTitle"></h3>
-      <p class="proj-modal-desc" id="projModalDesc"></p>
-      <div class="proj-modal-section">
-        <div class="proj-modal-label">Project Breakdown</div>
-        <ul class="proj-modal-list" id="projModalList"></ul>
-      </div>
-      <div class="proj-modal-section" id="projModalLinksWrap">
-        <div class="proj-modal-label">Links</div>
-        <div class="proj-modal-links" id="projModalLinks"></div>
-      </div>
-    </div>
-  </article>
+<article class="proj-modal-card" role="dialog" aria-modal="true" aria-labelledby="projModalTitle">
+<button class="proj-modal-close" id="projModalClose" type="button" aria-label="Close project details">&times;</button>
+<div class="proj-modal-img"><img id="projModalImg" src="" alt=""></div>
+<div class="proj-modal-body">
+<div class="proj-modal-meta" id="projModalMeta"></div>
+<h3 class="proj-modal-title" id="projModalTitle"></h3>
+<p class="proj-modal-desc" id="projModalDesc"></p>
+<div class="proj-modal-section">
+<div class="proj-modal-label">Project Breakdown</div>
+<ul class="proj-modal-list" id="projModalList"></ul>
+</div>
+<div class="proj-modal-section" id="projModalLinksWrap">
+<div class="proj-modal-label">Links</div>
+<div class="proj-modal-links" id="projModalLinks"></div>
+</div>
+</div>
+</article>
 </div>
 <!-- MARQUEE 2 -->
 <div class="marq rev">
-  <div class="marq-t">
-    <span class="marq-item">IndusInd Analysis</span><span class="marq-item a">·</span><span class="marq-item">Netflix Bias Study</span><span class="marq-item a">·</span><span class="marq-item">Startup Framework</span><span class="marq-item a">·</span><span class="marq-item">Strategic Research</span><span class="marq-item a">·</span><span class="marq-item">Open Source</span><span class="marq-item a">·</span><span class="marq-item">IndusInd Analysis</span><span class="marq-item a">·</span><span class="marq-item">Netflix Bias Study</span><span class="marq-item a">·</span><span class="marq-item">Startup Framework</span><span class="marq-item a">·</span><span class="marq-item">Strategic Research</span><span class="marq-item a">·</span><span class="marq-item">Open Source</span><span class="marq-item a">·</span>
-  </div>
+<div class="marq-t">
+<span class="marq-item">IndusInd Analysis</span><span class="marq-item a">·</span><span class="marq-item">Netflix Bias Study</span><span class="marq-item a">·</span><span class="marq-item">Startup Framework</span><span class="marq-item a">·</span><span class="marq-item">Strategic Research</span><span class="marq-item a">·</span><span class="marq-item">Open Source</span><span class="marq-item a">·</span><span class="marq-item">IndusInd Analysis</span><span class="marq-item a">·</span><span class="marq-item">Netflix Bias Study</span><span class="marq-item a">·</span><span class="marq-item">Startup Framework</span><span class="marq-item a">·</span><span class="marq-item">Strategic Research</span><span class="marq-item a">·</span><span class="marq-item">Open Source</span><span class="marq-item a">·</span>
+</div>
 </div>
 
 <!-- JOURNEY -->
 <section id="journey">
-  <div class="jrn-hdr sec-reveal">
-    <div>
-      <div class="sec-tag">Background</div>
-      <h2 class="jrn-h2">My <em>Journey</em></h2>
-    </div>
-    <div class="jrn-note">Experience, Education &amp; Leadership</div>
-  </div>
-  <div class="jrn-grid sec-reveal">
-    <div class="jcol">
-      <div class="jcol-lbl">Experience</div>
-      <div class="jitem"><div class="jdate">2025 – Present</div><div class="jtitle">Product Intern</div><div class="jsub">@ Pineos — Built the CareCore MVP, helping secure a ₹10L client deal. Developed the AEO/GEO Sales Agent, cutting prospect research time from 4 hours to under 10 minutes.</div></div>
-      <div class="jitem"><div class="jdate">Apr 2024 – Aug 2024</div><div class="jtitle">District Fellow</div><div class="jsub">@ FLAME University — Field research across 50+ rural villages, qualitative data collection and reporting.</div><a href="https://media.licdn.com/dms/image/v2/D4E2DAQGa2PbijtAiEg/profile-treasury-image-shrink_1920_1920/B4EZlDzxLyKsAc-/0/1757779270423?e=1774861200&v=beta&t=IqhJBDQn7FdodG_TKk6krJdbuaBsyix4KpCpAi1WMUw" target="_blank" class="jcert-link">View Certificate ↗</a></div>
-    </div>
-    <div class="jcol">
-      <div class="jcol-lbl">Education</div>
-      <div class="jitem"><div class="jdate">2025 – 2029</div><div class="jtitle">IIT Madras</div><div class="jsub">BS in Data Science &amp; Applications. Python, Statistics, ML Foundations.</div></div>
-      <div class="jitem"><div class="jdate">2025 – 2028</div><div class="jtitle">Institute of Venture Building</div><div class="jsub">UG in Entrepreneurship &amp; Software Dev. Product Development, Startup Strategy.</div></div>
-      <div class="jitem"><div class="jdate">2018 – 2025</div><div class="jtitle">JNV Tuljapur</div><div class="jsub">CBSE Class 6–12. Class X: 90% · Class XII: 80%.</div></div>
-    </div>
-    <div class="jcol">
-      <div class="jcol-lbl">Leadership &amp; Awards</div>
-      <div class="jitem"><div class="jdate">2020–21, 2023–24</div><div class="jtitle">House Captain</div><div class="jsub">Led 40 students in inter-house competitions and activities.</div></div>
-      <div class="jitem"><div class="jdate">2020 – 2022</div><div class="jtitle">NCC Team Leader</div><div class="jsub">Led 25 cadets in drills, parades, and structured training.</div></div>
-      <div class="jitem"><div class="jdate">2023 – 2024</div><div class="jtitle">Gold Medal — HelpAge India</div><div class="jsub">Outstanding community service and sustained social impact.</div></div>
-    </div>
-  </div>
+<div class="jrn-hdr sec-reveal">
+<div>
+<div class="sec-tag">Background</div>
+<h2 class="jrn-h2">My <em>Journey</em></h2>
+</div>
+<div class="jrn-note">Experience, Education &amp; Leadership</div>
+</div>
+<div class="jrn-grid sec-reveal">
+<div class="jcol">
+<div class="jcol-lbl">Experience</div>
+<div class="jitem"><div class="jdate">2025 – Present</div><div class="jtitle">Product Intern</div><div class="jsub">@ Pineos — Built the CareCore MVP, helping secure a ₹10L client deal. Developed the AEO/GEO Sales Agent, cutting prospect research time from 4 hours to under 10 minutes.</div></div>
+<div class="jitem"><div class="jdate">Apr 2024 – Aug 2024</div><div class="jtitle">District Fellow</div><div class="jsub">@ FLAME University — Field research across 50+ rural villages, qualitative data collection and reporting.</div><a href="https://media.licdn.com/dms/image/v2/D4E2DAQGa2PbijtAiEg/profile-treasury-image-shrink_1920_1920/B4EZlDzxLyKsAc-/0/1757779270423?e=1774861200&v=beta&t=IqhJBDQn7FdodG_TKk6krJdbuaBsyix4KpCpAi1WMUw" target="_blank" class="jcert-link">View Certificate ↗</a></div>
+</div>
+<div class="jcol">
+<div class="jcol-lbl">Education</div>
+<div class="jitem"><div class="jdate">2025 – 2029</div><div class="jtitle">IIT Madras</div><div class="jsub">BS in Data Science &amp; Applications. Python, Statistics, ML Foundations.</div></div>
+<div class="jitem"><div class="jdate">2025 – 2028</div><div class="jtitle">Institute of Venture Building</div><div class="jsub">UG in Entrepreneurship &amp; Software Dev. Product Development, Startup Strategy.</div></div>
+<div class="jitem"><div class="jdate">2018 – 2025</div><div class="jtitle">JNV Tuljapur</div><div class="jsub">CBSE Class 6–12. Class X: 90% · Class XII: 80%.</div></div>
+</div>
+<div class="jcol">
+<div class="jcol-lbl">Leadership &amp; Awards</div>
+<div class="jitem"><div class="jdate">2020–21, 2023–24</div><div class="jtitle">House Captain</div><div class="jsub">Led 40 students in inter-house competitions and activities.</div></div>
+<div class="jitem"><div class="jdate">2020 – 2022</div><div class="jtitle">NCC Team Leader</div><div class="jsub">Led 25 cadets in drills, parades, and structured training.</div></div>
+<div class="jitem"><div class="jdate">2023 – 2024</div><div class="jtitle">Gold Medal — HelpAge India</div><div class="jsub">Outstanding community service and sustained social impact.</div></div>
+</div>
+</div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-  <div class="sec-tag sec-reveal">Technical</div>
-  <h2 class="sk-h2 sec-reveal delay-1">Tech <em>Stack</em></h2>
-  <div id="sklist" class="rfade">
-    <div class="sk-row"><span class="sk-nm">Python</span><div class="sk-bw"><div class="sk-bf" style="width:90%"></div></div><span class="sk-pct">90%</span></div>
-    <div class="sk-row"><span class="sk-nm">JavaScript</span><div class="sk-bw"><div class="sk-bf" style="width:78%"></div></div><span class="sk-pct">78%</span></div>
-    <div class="sk-row"><span class="sk-nm">SQL / MySQL</span><div class="sk-bw"><div class="sk-bf" style="width:80%"></div></div><span class="sk-pct">80%</span></div>
-    <div class="sk-row"><span class="sk-nm">Machine Learning</span><div class="sk-bw"><div class="sk-bf" style="width:65%"></div></div><span class="sk-pct">65%</span></div>
-    <div class="sk-row"><span class="sk-nm">Pandas / NumPy</span><div class="sk-bw"><div class="sk-bf" style="width:72%"></div></div><span class="sk-pct">72%</span></div>
-    <div class="sk-row"><span class="sk-nm">Power BI</span><div class="sk-bw"><div class="sk-bf" style="width:60%"></div></div><span class="sk-pct">60%</span></div>
-    <div class="sk-row"><span class="sk-nm">OpenVINO</span><div class="sk-bw"><div class="sk-bf" style="width:55%"></div></div><span class="sk-pct">55%</span></div>
-    <div class="sk-row"><span class="sk-nm">Gemini / Mistral AI</span><div class="sk-bw"><div class="sk-bf" style="width:48%"></div></div><span class="sk-pct">48%</span></div>
-    <div class="sk-row"><span class="sk-nm">REST APIs</span><div class="sk-bw"><div class="sk-bf" style="width:70%"></div></div><span class="sk-pct">70%</span></div>
-  </div>
+<div class="sec-tag sec-reveal">Technical</div>
+<h2 class="sk-h2 sec-reveal delay-1">Tech <em>Stack</em></h2>
+<div id="sklist" class="rfade">
+<div class="sk-row"><span class="sk-nm">Python</span><div class="sk-bw"><div class="sk-bf" style="width:90%"></div></div><span class="sk-pct">90%</span></div>
+<div class="sk-row"><span class="sk-nm">JavaScript</span><div class="sk-bw"><div class="sk-bf" style="width:78%"></div></div><span class="sk-pct">78%</span></div>
+<div class="sk-row"><span class="sk-nm">SQL / MySQL</span><div class="sk-bw"><div class="sk-bf" style="width:80%"></div></div><span class="sk-pct">80%</span></div>
+<div class="sk-row"><span class="sk-nm">Machine Learning</span><div class="sk-bw"><div class="sk-bf" style="width:65%"></div></div><span class="sk-pct">65%</span></div>
+<div class="sk-row"><span class="sk-nm">Pandas / NumPy</span><div class="sk-bw"><div class="sk-bf" style="width:72%"></div></div><span class="sk-pct">72%</span></div>
+<div class="sk-row"><span class="sk-nm">Power BI</span><div class="sk-bw"><div class="sk-bf" style="width:60%"></div></div><span class="sk-pct">60%</span></div>
+<div class="sk-row"><span class="sk-nm">OpenVINO</span><div class="sk-bw"><div class="sk-bf" style="width:55%"></div></div><span class="sk-pct">55%</span></div>
+<div class="sk-row"><span class="sk-nm">Gemini / Mistral AI</span><div class="sk-bw"><div class="sk-bf" style="width:48%"></div></div><span class="sk-pct">48%</span></div>
+<div class="sk-row"><span class="sk-nm">REST APIs</span><div class="sk-bw"><div class="sk-bf" style="width:70%"></div></div><span class="sk-pct">70%</span></div>
+</div>
 </section>
 
 <!-- AWARDS -->
 <section id="awards">
-  <div class="sec-tag sec-reveal">Recognition</div>
-  <h2 class="aw-h2 sec-reveal delay-1">Certs &amp; <em>Awards</em></h2>
-  <div class="aw-grid sec-reveal delay-2">
-    <div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://skillshop.credential.net/da0aae46-bb5b-4635-ab5c-83c26765e4a3#acc.uNQok3wt" target="_blank">AI-Powered Performance Ads</a></div><div class="aw-sb">Google Skillshop Certification</div></div>
-    <div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://www.credly.com/badges/1e008297-0515-4da1-ba12-b61c3ba793e8/linked_in_profile" target="_blank">Hadoop Foundations — Level 1</a></div><div class="aw-sb">IBM / Credly Verified Badge</div></div>
-    <div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://skillshop.credential.net/63582ccb-bf4b-4b0b-889b-7bda5b34bac2#acc.h3BZyMuo" target="_blank">Google Analytics Certification</a></div><div class="aw-sb">Advanced analytics and data interpretation</div></div>
-    <div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://simpli-web.app.link/e/V3y10dnMJ1b" target="_blank">Power BI Data Modelling Basics</a></div><div class="aw-sb">Simplilearn — data modelling fundamentals</div></div>
-    <div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://simpli-web.app.link/e/mo5CUEjMJ1b" target="_blank">SQL Analytics &amp; BI on Databricks</a></div><div class="aw-sb">Simplilearn — SQL &amp; Databricks analytics</div></div>
-    <div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://simpli-web.app.link/e/hAras5eMJ1b" target="_blank">Create Image Captioning Models</a></div><div class="aw-sb">Simplilearn — deep learning project</div></div>
-    <div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://simpli-web.app.link/e/GCTdj5pMJ1b" target="_blank">Business Analytics with Excel</a></div><div class="aw-sb">Data analysis and business visualization</div></div>
-    <div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://drive.google.com/file/d/13RagnT67KR4tCWGH_wkg_f6s6kJ765W7/view?usp=sharing" target="_blank">Startup School: Prompt to Prototype</a></div><div class="aw-sb">Prompt engineering &amp; rapid prototyping</div></div>
-    <div class="aw"><div class="aw-yr">2024</div><div class="aw-nm"><a href="https://drive.google.com/file/d/1wnH2b_ftt82u55cO2E_lzYaTkHLQHGqR/view?usp=sharing" target="_blank">AI in Biology — CSIR</a></div><div class="aw-sb">Intersection of AI and biological sciences</div></div>
-  </div>
+<div class="sec-tag sec-reveal">Recognition</div>
+<h2 class="aw-h2 sec-reveal delay-1">Certs &amp; <em>Awards</em></h2>
+<div class="aw-grid sec-reveal delay-2">
+<div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://skillshop.credential.net/da0aae46-bb5b-4635-ab5c-83c26765e4a3#acc.uNQok3wt" target="_blank">AI-Powered Performance Ads</a></div><div class="aw-sb">Google Skillshop Certification</div></div>
+<div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://www.credly.com/badges/1e008297-0515-4da1-ba12-b61c3ba793e8/linked_in_profile" target="_blank">Hadoop Foundations — Level 1</a></div><div class="aw-sb">IBM / Credly Verified Badge</div></div>
+<div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://skillshop.credential.net/63582ccb-bf4b-4b0b-889b-7bda5b34bac2#acc.h3BZyMuo" target="_blank">Google Analytics Certification</a></div><div class="aw-sb">Advanced analytics and data interpretation</div></div>
+<div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://simpli-web.app.link/e/V3y10dnMJ1b" target="_blank">Power BI Data Modelling Basics</a></div><div class="aw-sb">Simplilearn — data modelling fundamentals</div></div>
+<div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://simpli-web.app.link/e/mo5CUEjMJ1b" target="_blank">SQL Analytics &amp; BI on Databricks</a></div><div class="aw-sb">Simplilearn — SQL &amp; Databricks analytics</div></div>
+<div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://simpli-web.app.link/e/hAras5eMJ1b" target="_blank">Create Image Captioning Models</a></div><div class="aw-sb">Simplilearn — deep learning project</div></div>
+<div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://simpli-web.app.link/e/GCTdj5pMJ1b" target="_blank">Business Analytics with Excel</a></div><div class="aw-sb">Data analysis and business visualization</div></div>
+<div class="aw"><div class="aw-yr">2025</div><div class="aw-nm"><a href="https://drive.google.com/file/d/13RagnT67KR4tCWGH_wkg_f6s6kJ765W7/view?usp=sharing" target="_blank">Startup School: Prompt to Prototype</a></div><div class="aw-sb">Prompt engineering &amp; rapid prototyping</div></div>
+<div class="aw"><div class="aw-yr">2024</div><div class="aw-nm"><a href="https://drive.google.com/file/d/1wnH2b_ftt82u55cO2E_lzYaTkHLQHGqR/view?usp=sharing" target="_blank">AI in Biology — CSIR</a></div><div class="aw-sb">Intersection of AI and biological sciences</div></div>
+</div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="ct-bg-txt">Contact</div>
-  <div class="ct-body">
-    <div>
-      <div class="ct-tag rfade">Let's Work Together</div>
-      <h2 class="ct-title">
-        <span class="cr"><span class="ci">Let's</span></span>
-        <span class="cr"><span class="ci"><em>Create</em></span></span>
-        <span class="cr"><span class="ci">Impact.</span></span>
-      </h2>
-    </div>
-    <div class="ct-right rfade">
-      <a href="/cdn-cgi/l/email-protection#f199849c9394909f989a9485c3c1c1c7b1969c90989ddf929e9c" class="ct-email"><span class="__cf_email__" data-cfemail="8be3fee6e9eeeae5e2e0eeffb9bbbbbdcbece6eae2e7a5e8e4e6">humbeaniket2006@gmail.com</span></a>
-      <div class="ct-socials">
-        <a href="https://www.linkedin.com/in/aniket-ankush-humbe-26124b384/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/humbeaniket2006-max" target="_blank">GitHub</a>
-      </div>
-      <a href="https://docs.google.com/document/d/1P93UlG3dHRSYN-1_EOmKGGEletw4QQEYWu8ZqywZjAE/edit?tab=t.0#heading=h.dug4vhtjqw22" target="_blank" class="ct-cv-btn">Download Resume ↓</a>
-    </div>
-  </div>
+<div class="ct-bg-txt">Contact</div>
+<div class="ct-body">
+<div>
+<div class="ct-tag rfade">Let's Work Together</div>
+<h2 class="ct-title">
+<span class="cr"><span class="ci">Let's</span></span>
+<span class="cr"><span class="ci"><em>Create</em></span></span>
+<span class="cr"><span class="ci">Impact.</span></span>
+</h2>
+</div>
+<div class="ct-right rfade">
+<a href="/cdn-cgi/l/email-protection#f199849c9394909f989a9485c3c1c1c7b1969c90989ddf929e9c" class="ct-email"><span class="__cf_email__" data-cfemail="8be3fee6e9eeeae5e2e0eeffb9bbbbbdcbece6eae2e7a5e8e4e6">humbeaniket2006@gmail.com</span></a>
+<div class="ct-socials">
+<a href="https://www.linkedin.com/in/aniket-ankush-humbe-26124b384/" target="_blank">LinkedIn</a>
+<a href="https://github.com/humbeaniket2006-max" target="_blank">GitHub</a>
+</div>
+<a href="https://docs.google.com/document/d/1P93UlG3dHRSYN-1_EOmKGGEletw4QQEYWu8ZqywZjAE/edit?tab=t.0#heading=h.dug4vhtjqw22" target="_blank" class="ct-cv-btn">Download Resume ↓</a>
+</div>
+</div>
 </section>
 
 <footer>
-  <span id="footer-year">© 2026 Aniket Humbe</span>
-  <span>IIT Madras · IVB · Chennai, India</span>
-  <span>Built with intention</span>
+<span id="footer-year">© 2026 Aniket Humbe</span>
+<span>IIT Madras · IVB · Chennai, India</span>
+<span>Built with intention</span>
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
@@ -979,461 +975,461 @@ const lerp = (a,b,t) => a+(b-a)*t;
 
 /* ── PRELOADER ── */
 (function(){
-  const bar = document.getElementById('plbar');
-  const pct = document.getElementById('plpct');
-  const wipe = document.getElementById('plwipe');
-  let v = 0, done = false;
-  function tick(){
-    if(done) return;
-    v = Math.min(v + Math.floor(Math.random()*5)+2, 100);
-    bar.style.width = v+'%';
-    pct.textContent = v+'%';
-    if(v >= 100){
-      done = true;
-      setTimeout(()=>{
-        wipe.style.transition = 'transform .8s cubic-bezier(.76,0,.24,1)';
-        wipe.style.transform = 'scaleY(1)';
-        setTimeout(()=>{
-          document.getElementById('preloader').style.display = 'none';
-          document.body.classList.remove('loading');
-          // show nav
-          const nav = document.getElementById('nav');
-          nav.classList.add('vis');
-          // hero text reveals
-          setTimeout(()=>document.getElementById('hL1').classList.add('in'), 100);
-          setTimeout(()=>document.getElementById('hL2').classList.add('in'), 220);
-          setTimeout(()=>document.getElementById('hSub').classList.add('in'), 420);
-          setup();
-        }, 820);
-      }, 320);
-      return;
-    }
-    setTimeout(tick, 14 + Math.random()*20);
-  }
-  tick();
+const bar = document.getElementById('plbar');
+const pct = document.getElementById('plpct');
+const wipe = document.getElementById('plwipe');
+let v = 0, done = false;
+function tick(){
+if(done) return;
+v = Math.min(v + Math.floor(Math.random()*5)+2, 100);
+bar.style.width = v+'%';
+pct.textContent = v+'%';
+if(v >= 100){
+done = true;
+setTimeout(()=>{
+wipe.style.transition = 'transform .8s cubic-bezier(.76,0,.24,1)';
+wipe.style.transform = 'scaleY(1)';
+setTimeout(()=>{
+document.getElementById('preloader').style.display = 'none';
+document.body.classList.remove('loading');
+// show nav
+const nav = document.getElementById('nav');
+nav.classList.add('vis');
+// hero text reveals
+setTimeout(()=>document.getElementById('hL1').classList.add('in'), 100);
+setTimeout(()=>document.getElementById('hL2').classList.add('in'), 220);
+setTimeout(()=>document.getElementById('hSub').classList.add('in'), 420);
+setup();
+}, 820);
+}, 320);
+return;
+}
+setTimeout(tick, 14 + Math.random()*20);
+}
+tick();
 })();
 
 /* ── MOBILE NAV ── */
 function closeMobileNav(){
-  const m=document.getElementById('nav-mobile');
-  m.classList.remove('open');
-  document.body.style.overflow='';
+const m=document.getElementById('nav-mobile');
+m.classList.remove('open');
+document.body.style.overflow='';
 }
 const navToggle=document.getElementById('nav-toggle');
 if(navToggle){
-  navToggle.addEventListener('click',()=>{
-    const m=document.getElementById('nav-mobile');
-    const isOpen=m.classList.toggle('open');
-    document.body.style.overflow=isOpen?'hidden':'';
-  });
+navToggle.addEventListener('click',()=>{
+const m=document.getElementById('nav-mobile');
+const isOpen=m.classList.toggle('open');
+document.body.style.overflow=isOpen?'hidden':'';
+});
 }
 
 /* ── PARTICLES ── */
 (function(){
-  const pc=document.getElementById('particles');
-  if(!pc)return;
-  for(let i=0;i<18;i++){
-    const p=document.createElement('div');
-    p.className='particle';
-    const sz=Math.random()*4+2;
-    p.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;
-      animation-duration:${12+Math.random()*20}s;
-      animation-delay:${Math.random()*15}s;
-      opacity:${.03+Math.random()*.05}`;
-    pc.appendChild(p);
-  }
-  setTimeout(()=>pc.classList.add('vis'),800);
+const pc=document.getElementById('particles');
+if(!pc)return;
+for(let i=0;i<18;i++){
+const p=document.createElement('div');
+p.className='particle';
+const sz=Math.random()*4+2;
+p.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;
+     animation-duration:${12+Math.random()*20}s;
+     animation-delay:${Math.random()*15}s;
+     opacity:${.03+Math.random()*.05}`;
+pc.appendChild(p);
+}
+setTimeout(()=>pc.classList.add('vis'),800);
 })();
 
 function setup(){
-  /* ── SCROLL PROGRESS BAR ── */
-  const prog=document.getElementById('scroll-prog');
-  function updateProg(){
-    const max=document.body.scrollHeight-window.innerHeight;
-    const pct=max>0?(window.scrollY/max*100):0;
-    if(prog) prog.style.width=pct+'%';
-  }
-  window.addEventListener('scroll',updateProg,{passive:true});
+/* ── SCROLL PROGRESS BAR ── */
+const prog=document.getElementById('scroll-prog');
+function updateProg(){
+const max=document.body.scrollHeight-window.innerHeight;
+const pct=max>0?(window.scrollY/max*100):0;
+if(prog) prog.style.width=pct+'%';
+}
+window.addEventListener('scroll',updateProg,{passive:true});
 
-  /* ── NAV scroll state ── */
-  const nav = document.getElementById('nav');
-  function updateNav(){
-    if(window.scrollY > window.innerHeight * 0.75) nav.classList.add('scrolled');
-    else nav.classList.remove('scrolled');
-  }
-  window.addEventListener('scroll', updateNav, {passive:true});
-  updateNav();
+/* ── NAV scroll state ── */
+const nav = document.getElementById('nav');
+function updateNav(){
+if(window.scrollY > window.innerHeight * 0.75) nav.classList.add('scrolled');
+else nav.classList.remove('scrolled');
+}
+window.addEventListener('scroll', updateNav, {passive:true});
+updateNav();
 
-  /* ── CURSOR ── */
-  const dot = document.getElementById('cur-dot');
-  const ring = document.getElementById('cur-ring');
-  let mx=0, my=0, rx=0, ry=0;
-  document.addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; dot.style.left=mx+'px'; dot.style.top=my+'px'; });
-  let cursorActive = false;
-  document.addEventListener('mousemove', ()=>{ cursorActive = true; }, {once:true});
-  (function lc(){ 
-    if(cursorActive){ rx=lerp(rx,mx,.11); ry=lerp(ry,my,.11); ring.style.left=rx+'px'; ring.style.top=ry+'px'; }
-    requestAnimationFrame(lc); 
-  })();
-  document.querySelectorAll('a,button,.proj-card,.sk-row').forEach(el=>{
-    el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
-    el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
-  });
+/* ── CURSOR ── */
+const dot = document.getElementById('cur-dot');
+const ring = document.getElementById('cur-ring');
+let mx=0, my=0, rx=0, ry=0;
+document.addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; dot.style.left=mx+'px'; dot.style.top=my+'px'; });
+let cursorActive = false;
+document.addEventListener('mousemove', ()=>{ cursorActive = true; }, {once:true});
+(function lc(){ 
+if(cursorActive){ rx=lerp(rx,mx,.11); ry=lerp(ry,my,.11); ring.style.left=rx+'px'; ring.style.top=ry+'px'; }
+requestAnimationFrame(lc); 
+})();
+document.querySelectorAll('a,button,.proj-card,.sk-row').forEach(el=>{
+el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
+el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
+});
 
-  /* ── HERO CURSOR PARALLAX ── */
-  // 3 layers at different depths + image counter-moves
-  const heroEl    = document.getElementById('hero');
-  const imgEl     = document.getElementById('hImg');
-  const layer1    = document.getElementById('hLayer1'); // top tags  — subtle
-  const layer2    = document.getElementById('hLayer2'); // big title — medium
-  const layer3    = document.getElementById('hLayer3'); // bottom    — small
+/* ── HERO CURSOR PARALLAX ── */
+// 3 layers at different depths + image counter-moves
+const heroEl    = document.getElementById('hero');
+const imgEl     = document.getElementById('hImg');
+const layer1    = document.getElementById('hLayer1'); // top tags  — subtle
+const layer2    = document.getElementById('hLayer2'); // big title — medium
+const layer3    = document.getElementById('hLayer3'); // bottom    — small
 
-  let heroW=0, heroH=0;
-  let pmx=0, pmy=0;   // raw normalised -1..1
-  let l1x=0,l1y=0, l2x=0,l2y=0, l3x=0,l3y=0, imx=0,imy=0;
+let heroW=0, heroH=0;
+let pmx=0, pmy=0;   // raw normalised -1..1
+let l1x=0,l1y=0, l2x=0,l2y=0, l3x=0,l3y=0, imx=0,imy=0;
 
-  function measureHero(){ heroW=heroEl.offsetWidth; heroH=heroEl.offsetHeight; }
-  measureHero();
-  window.addEventListener('resize', measureHero);
+function measureHero(){ heroW=heroEl.offsetWidth; heroH=heroEl.offsetHeight; }
+measureHero();
+window.addEventListener('resize', measureHero);
 
-  document.addEventListener('mousemove', e=>{
-    if(window.scrollY > heroH) return;
-    pmx = (e.clientX/heroW - 0.5) * 2;
-    pmy = (e.clientY/heroH - 0.5) * 2;
-  });
+document.addEventListener('mousemove', e=>{
+if(window.scrollY > heroH) return;
+pmx = (e.clientX/heroW - 0.5) * 2;
+pmy = (e.clientY/heroH - 0.5) * 2;
+});
 
-  // reset when mouse leaves hero
-  heroEl.addEventListener('mouseleave',()=>{ pmx=0; pmy=0; });
+// reset when mouse leaves hero
+heroEl.addEventListener('mouseleave',()=>{ pmx=0; pmy=0; });
 
-  (function parallaxRaf(){
-    // Only animate parallax when hero is visible
-    if(window.scrollY <= heroH){
-      l1x=lerp(l1x, pmx*8,  .055);  l1y=lerp(l1y, pmy*5,  .055);
-      l2x=lerp(l2x, pmx*18, .065);  l2y=lerp(l2y, pmy*12, .065);
-      l3x=lerp(l3x, pmx*10, .06);   l3y=lerp(l3y, pmy*7,  .06);
-      imx=lerp(imx, pmx*-12,.05);   imy=lerp(imy, pmy*-8, .05);
-      layer1.style.transform = `translate(${l1x}px,${l1y}px)`;
-      layer2.style.transform = `translate(${l2x}px,${l2y}px)`;
-      layer3.style.transform = `translate(${l3x}px,${l3y}px)`;
-      imgEl.style.transform  = `scale(1.06) translate(${imx}px,${imy}px)`;
-    }
-    requestAnimationFrame(parallaxRaf);
-  })();
+(function parallaxRaf(){
+// Only animate parallax when hero is visible
+if(window.scrollY <= heroH){
+l1x=lerp(l1x, pmx*8,  .055);  l1y=lerp(l1y, pmy*5,  .055);
+l2x=lerp(l2x, pmx*18, .065);  l2y=lerp(l2y, pmy*12, .065);
+l3x=lerp(l3x, pmx*10, .06);   l3y=lerp(l3y, pmy*7,  .06);
+imx=lerp(imx, pmx*-12,.05);   imy=lerp(imy, pmy*-8, .05);
+layer1.style.transform = `translate(${l1x}px,${l1y}px)`;
+layer2.style.transform = `translate(${l2x}px,${l2y}px)`;
+layer3.style.transform = `translate(${l3x}px,${l3y}px)`;
+imgEl.style.transform  = `scale(1.06) translate(${imx}px,${imy}px)`;
+}
+requestAnimationFrame(parallaxRaf);
+})();
 
-  /* ── CAROUSEL PROJECTS ── */
-  (function(){
-    const track = document.getElementById('projtrack');
-    const dotsWrap = document.getElementById('projDots');
-    const btnPrev = document.getElementById('projPrev');
-    const btnNext = document.getElementById('projNext');
-    if(!track) return;
-    const cards = track.querySelectorAll('.proj-card');
-    const total = cards.length;
-    let current = 0;
+/* ── CAROUSEL PROJECTS ── */
+(function(){
+const track = document.getElementById('projtrack');
+const dotsWrap = document.getElementById('projDots');
+const btnPrev = document.getElementById('projPrev');
+const btnNext = document.getElementById('projNext');
+if(!track) return;
+const cards = track.querySelectorAll('.proj-card');
+const total = cards.length;
+let current = 0;
 
-    function visibleCount(){
-      const w = track.parentElement.offsetWidth;
-      if(w < 600) return 1;
-      if(w < 900) return 2;
-      return 4;
-    }
+function visibleCount(){
+const w = track.parentElement.offsetWidth;
+if(w < 600) return 1;
+if(w < 900) return 2;
+return 4;
+}
 
-    function maxIndex(){ return Math.max(0, total - visibleCount()); }
+function maxIndex(){ return Math.max(0, total - visibleCount()); }
 
-    // Build dots
-    for(let i=0;i<total;i++){
-      const d = document.createElement('button');
-      d.className='proj-dot';
-      d.setAttribute('aria-label','Go to project '+(i+1));
-      d.addEventListener('click',()=>goTo(i));
-      dotsWrap.appendChild(d);
-    }
+// Build dots
+for(let i=0;i<total;i++){
+const d = document.createElement('button');
+d.className='proj-dot';
+d.setAttribute('aria-label','Go to project '+(i+1));
+d.addEventListener('click',()=>goTo(i));
+dotsWrap.appendChild(d);
+}
 
-    function goTo(idx){
-      idx = Math.max(0, Math.min(idx, maxIndex()));
-      current = idx;
-      const count = visibleCount();
-      const cardW = cards[0].offsetWidth + 24; // gap=24
-      track.style.transform = `translateX(${-current * cardW}px)`;
-      const activeIndex = current === maxIndex() ? total - 1 : current + (count >= 3 ? 1 : 0);
-      cards.forEach((card,i)=>card.classList.toggle('active', i===activeIndex));
-      dotsWrap.querySelectorAll('.proj-dot').forEach((d,i)=>d.classList.toggle('active', i===current));
-      btnPrev.disabled = current === 0;
-      btnNext.disabled = current >= maxIndex();
-    }
+function goTo(idx){
+idx = Math.max(0, Math.min(idx, maxIndex()));
+current = idx;
+const count = visibleCount();
+const cardW = cards[0].offsetWidth + 24; // gap=24
+track.style.transform = `translateX(${-current * cardW}px)`;
+const activeIndex = current === maxIndex() ? total - 1 : current + (count >= 3 ? 1 : 0);
+cards.forEach((card,i)=>card.classList.toggle('active', i===activeIndex));
+dotsWrap.querySelectorAll('.proj-dot').forEach((d,i)=>d.classList.toggle('active', i===current));
+btnPrev.disabled = current === 0;
+btnNext.disabled = current >= maxIndex();
+}
 
-    btnPrev.addEventListener('click', ()=> goTo(current - 1));
-    btnNext.addEventListener('click', ()=> goTo(current + 1));
+btnPrev.addEventListener('click', ()=> goTo(current - 1));
+btnNext.addEventListener('click', ()=> goTo(current + 1));
 
-    let autoTimer;
-    function startAuto(){
-      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      stopAuto();
-      autoTimer = setInterval(()=>goTo(current >= maxIndex() ? 0 : current + 1), 5200);
-    }
-    function stopAuto(){
-      if(autoTimer) clearInterval(autoTimer);
-    }
-    const carousel = document.querySelector('.proj-carousel');
-    carousel.addEventListener('mouseenter', stopAuto);
-    carousel.addEventListener('mouseleave', startAuto);
-    carousel.addEventListener('focusin', stopAuto);
-    carousel.addEventListener('focusout', startAuto);
+let autoTimer;
+function startAuto(){
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+stopAuto();
+autoTimer = setInterval(()=>goTo(current >= maxIndex() ? 0 : current + 1), 5200);
+}
+function stopAuto(){
+if(autoTimer) clearInterval(autoTimer);
+}
+const carousel = document.querySelector('.proj-carousel');
+carousel.addEventListener('mouseenter', stopAuto);
+carousel.addEventListener('mouseleave', startAuto);
+carousel.addEventListener('focusin', stopAuto);
+carousel.addEventListener('focusout', startAuto);
 
-    document.addEventListener('keydown', e=>{
-      const sec = document.getElementById('proj-wrapper');
-      if(!sec) return;
-      const r = sec.getBoundingClientRect();
-      if(r.top < window.innerHeight && r.bottom > 0){
-        if(e.key==='ArrowLeft'){ e.preventDefault(); goTo(current-1); }
-        if(e.key==='ArrowRight'){ e.preventDefault(); goTo(current+1); }
-      }
-    });
+document.addEventListener('keydown', e=>{
+const sec = document.getElementById('proj-wrapper');
+if(!sec) return;
+const r = sec.getBoundingClientRect();
+if(r.top < window.innerHeight && r.bottom > 0){
+if(e.key==='ArrowLeft'){ e.preventDefault(); goTo(current-1); }
+if(e.key==='ArrowRight'){ e.preventDefault(); goTo(current+1); }
+}
+});
 
-    window.addEventListener('resize', ()=> goTo(current));
-    goTo(0);
-    startAuto();
-  })();
+window.addEventListener('resize', ()=> goTo(current));
+goTo(0);
+startAuto();
+})();
 
-  /* ── EXPANDING PROJECT CARDS ── */
-  (function(){
-    const modal = document.getElementById('projModal');
-    const modalImg = document.getElementById('projModalImg');
-    const modalImgWrap = modalImg ? modalImg.closest('.proj-modal-img') : null;
-    const modalMeta = document.getElementById('projModalMeta');
-    const modalTitle = document.getElementById('projModalTitle');
-    const modalDesc = document.getElementById('projModalDesc');
-    const modalList = document.getElementById('projModalList');
-    const modalLinks = document.getElementById('projModalLinks');
-    const modalLinksWrap = document.getElementById('projModalLinksWrap');
-    const closeBtn = document.getElementById('projModalClose');
-    if(!modal || !modalImg || !modalTitle) return;
+/* ── EXPANDING PROJECT CARDS ── */
+(function(){
+const modal = document.getElementById('projModal');
+const modalImg = document.getElementById('projModalImg');
+const modalImgWrap = modalImg ? modalImg.closest('.proj-modal-img') : null;
+const modalMeta = document.getElementById('projModalMeta');
+const modalTitle = document.getElementById('projModalTitle');
+const modalDesc = document.getElementById('projModalDesc');
+const modalList = document.getElementById('projModalList');
+const modalLinks = document.getElementById('projModalLinks');
+const modalLinksWrap = document.getElementById('projModalLinksWrap');
+const closeBtn = document.getElementById('projModalClose');
+if(!modal || !modalImg || !modalTitle) return;
 
-    function openProject(card){
-      const img = card.querySelector('.pc-img img');
-      const title = card.querySelector('.pc-top h3');
-      const tags = Array.from(card.querySelectorAll('.ptag')).map(tag=>tag.textContent.trim()).filter(Boolean);
-      const lines = Array.from(card.querySelectorAll('.pc-line'));
-      const links = Array.from(card.querySelectorAll('.pc-link'));
+function openProject(card){
+const img = card.querySelector('.pc-img img');
+const title = card.querySelector('.pc-top h3');
+const tags = Array.from(card.querySelectorAll('.ptag')).map(tag=>tag.textContent.trim()).filter(Boolean);
+const lines = Array.from(card.querySelectorAll('.pc-line'));
+const links = Array.from(card.querySelectorAll('.pc-link'));
 
-      if(img){
-        modalImg.src = img.getAttribute('src');
-        modalImg.alt = img.alt;
-        if(modalImgWrap) modalImgWrap.classList.remove('is-empty');
-      }else{
-        modalImg.removeAttribute('src');
-        modalImg.alt = '';
-        if(modalImgWrap) modalImgWrap.classList.add('is-empty');
-      }
-      modalTitle.textContent = title ? title.textContent.trim() : 'Project';
-      modalMeta.textContent = tags.slice(0,3).join(' · ');
-      function cleanLine(line){
-        const label = line.querySelector('strong');
-        const raw = line.textContent.trim();
-        if(!label) return raw;
-        const labelText = label.textContent.trim();
-        return labelText + ': ' + raw.replace(labelText,'').trim();
-      }
+if(img){
+modalImg.src = img.getAttribute('src');
+modalImg.alt = img.alt;
+if(modalImgWrap) modalImgWrap.classList.remove('is-empty');
+}else{
+modalImg.removeAttribute('src');
+modalImg.alt = '';
+if(modalImgWrap) modalImgWrap.classList.add('is-empty');
+}
+modalTitle.textContent = title ? title.textContent.trim() : 'Project';
+modalMeta.textContent = tags.slice(0,3).join(' · ');
+function cleanLine(line){
+const label = line.querySelector('strong');
+const raw = line.textContent.trim();
+if(!label) return raw;
+const labelText = label.textContent.trim();
+return labelText + ': ' + raw.replace(labelText,'').trim();
+}
 
-      modalDesc.textContent = lines[0] ? cleanLine(lines[0]).replace(/^Problem:\s*/i,'') : '';
-      modalList.innerHTML = '';
-      lines.forEach(line=>{
-        const li = document.createElement('li');
-        li.textContent = cleanLine(line);
-        modalList.appendChild(li);
-      });
+modalDesc.textContent = lines[0] ? cleanLine(lines[0]).replace(/^Problem:\s*/i,'') : '';
+modalList.innerHTML = '';
+lines.forEach(line=>{
+const li = document.createElement('li');
+li.textContent = cleanLine(line);
+modalList.appendChild(li);
+});
 
-      modalLinks.innerHTML = '';
-      links.forEach(link=>{
-        const a = document.createElement('a');
-        a.href = link.href;
-        a.target = '_blank';
-        a.rel = 'noopener';
-        a.textContent = link.textContent.trim();
-        modalLinks.appendChild(a);
-      });
-      modalLinksWrap.style.display = links.length ? '' : 'none';
+modalLinks.innerHTML = '';
+links.forEach(link=>{
+const a = document.createElement('a');
+a.href = link.href;
+a.target = '_blank';
+a.rel = 'noopener';
+a.textContent = link.textContent.trim();
+modalLinks.appendChild(a);
+});
+modalLinksWrap.style.display = links.length ? '' : 'none';
 
-      modal.classList.add('open');
-      modal.setAttribute('aria-hidden','false');
-      document.body.classList.add('proj-modal-lock');
-      closeBtn.focus({preventScroll:true});
-    }
+modal.classList.add('open');
+modal.setAttribute('aria-hidden','false');
+document.body.classList.add('proj-modal-lock');
+closeBtn.focus({preventScroll:true});
+}
 
-    function closeProject(){
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden','true');
-      document.body.classList.remove('proj-modal-lock');
-    }
+function closeProject(){
+modal.classList.remove('open');
+modal.setAttribute('aria-hidden','true');
+document.body.classList.remove('proj-modal-lock');
+}
 
-    document.querySelectorAll('.proj-card').forEach(card=>{
-      card.setAttribute('tabindex','0');
-      card.setAttribute('role','button');
-      card.setAttribute('aria-label','Open project details');
-      card.addEventListener('click', e=>{
-        if(e.target.closest('a')) return;
-        openProject(card);
-      });
-      card.addEventListener('keydown', e=>{
-        if(e.target.closest('a')) return;
-        if(e.key === 'Enter' || e.key === ' '){
-          e.preventDefault();
-          openProject(card);
-        }
-      });
-    });
-    closeBtn.addEventListener('click', closeProject);
-    modal.addEventListener('click', e=>{ if(e.target === modal) closeProject(); });
-    document.addEventListener('keydown', e=>{
-      if(e.key === 'Escape' && modal.classList.contains('open')) closeProject();
-    });
-  })();
+document.querySelectorAll('.proj-card').forEach(card=>{
+card.setAttribute('tabindex','0');
+card.setAttribute('role','button');
+card.setAttribute('aria-label','Open project details');
+card.addEventListener('click', e=>{
+if(e.target.closest('a')) return;
+openProject(card);
+});
+card.addEventListener('keydown', e=>{
+if(e.target.closest('a')) return;
+if(e.key === 'Enter' || e.key === ' '){
+e.preventDefault();
+openProject(card);
+}
+});
+});
+closeBtn.addEventListener('click', closeProject);
+modal.addEventListener('click', e=>{ if(e.target === modal) closeProject(); });
+document.addEventListener('keydown', e=>{
+if(e.key === 'Escape' && modal.classList.contains('open')) closeProject();
+});
+})();
 
-  /* ── ABOUT CLIP REVEALS ── */
-  const aboutClips = document.querySelectorAll('#about .ci');
-  const abIo = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(!e.isIntersecting) return;
-      aboutClips.forEach((el,i)=>setTimeout(()=>el.classList.add('in'),i*90));
-      abIo.disconnect();
-    });
-  },{threshold:.1});
-  const ab = document.getElementById('about');
-  if(ab) abIo.observe(ab);
+/* ── ABOUT CLIP REVEALS ── */
+const aboutClips = document.querySelectorAll('#about .ci');
+const abIo = new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(!e.isIntersecting) return;
+aboutClips.forEach((el,i)=>setTimeout(()=>el.classList.add('in'),i*90));
+abIo.disconnect();
+});
+},{threshold:.1});
+const ab = document.getElementById('about');
+if(ab) abIo.observe(ab);
 
-  /* ── CONTACT CLIP REVEALS ── */
-  const ctClips = document.querySelectorAll('#contact .ci');
-  const ctIo = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(!e.isIntersecting) return;
-      ctClips.forEach((el,i)=>setTimeout(()=>el.classList.add('in'),i*100));
-      ctIo.disconnect();
-    });
-  },{threshold:.15});
-  const ct = document.getElementById('contact');
-  if(ct) ctIo.observe(ct);
+/* ── CONTACT CLIP REVEALS ── */
+const ctClips = document.querySelectorAll('#contact .ci');
+const ctIo = new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(!e.isIntersecting) return;
+ctClips.forEach((el,i)=>setTimeout(()=>el.classList.add('in'),i*100));
+ctIo.disconnect();
+});
+},{threshold:.15});
+const ct = document.getElementById('contact');
+if(ct) ctIo.observe(ct);
 
-  /* ── REVEALS (rfade + sec-reveal) ── */
-  const revealClasses=['.rfade','.sec-reveal','.sec-reveal-left','.sec-reveal-right'];
-  revealClasses.forEach(sel=>{
-    document.querySelectorAll(sel).forEach((el,i)=>{
-      const io = new IntersectionObserver(entries=>{
-        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-      },{threshold:.06,rootMargin:'0px 0px -40px 0px'});
-      io.observe(el);
-    });
-  });
+/* ── REVEALS (rfade + sec-reveal) ── */
+const revealClasses=['.rfade','.sec-reveal','.sec-reveal-left','.sec-reveal-right'];
+revealClasses.forEach(sel=>{
+document.querySelectorAll(sel).forEach((el,i)=>{
+const io = new IntersectionObserver(entries=>{
+entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.06,rootMargin:'0px 0px -40px 0px'});
+io.observe(el);
+});
+});
 
-  /* ── TEXT GROUP MOTION ── */
-  (function(){
-    const motionSelectors = [
-      '.sec-tag',
-      '.about-big',
-      '.about-txt',
-      '.sbox',
-      '.proj-hdr h2',
-      '.proj-intro',
-      '.proj-stat',
-      '.proj-card .pc-num',
-      '.proj-card h3',
-      '.proj-card .pc-line',
-      '.proj-card .pc-tags',
-      '.proj-card .pc-link',
-      '.jrn-h2',
-      '.jrn-note',
-      '.jitem',
-      '.sk-h2',
-      '.sk-row',
-      '.aw-h2',
-      '.aw',
-      '.ct-tag',
-      '.ct-title',
-      '.ct-right'
-    ];
-    const textItems = Array.from(document.querySelectorAll(motionSelectors.join(',')));
-    textItems.forEach((el,i)=>{
-      if(el.closest('#hero')) return;
-      el.classList.add('text-motion');
-      if(el.matches('.about-big,.proj-hdr h2,.jrn-h2,.sk-h2,.aw-h2,.ct-title')) el.classList.add('motion-headline');
-      el.style.setProperty('--tm-delay', ((i % 7) * 55) + 'ms');
-    });
-    document.querySelectorAll('.jitem,.aw,.sk-row,.sbox,.proj-stat').forEach(el=>el.classList.add('text-group-motion'));
-    const textIo = new IntersectionObserver(entries=>{
-      entries.forEach(e=>{
-        if(!e.isIntersecting) return;
-        e.target.classList.add('in');
-        textIo.unobserve(e.target);
-      });
-    },{threshold:.08,rootMargin:'0px 0px -35px 0px'});
-    textItems.forEach(el=>textIo.observe(el));
-  })();
+/* ── TEXT GROUP MOTION ── */
+(function(){
+const motionSelectors = [
+'.sec-tag',
+'.about-big',
+'.about-txt',
+'.sbox',
+'.proj-hdr h2',
+'.proj-intro',
+'.proj-stat',
+'.proj-card .pc-num',
+'.proj-card h3',
+'.proj-card .pc-line',
+'.proj-card .pc-tags',
+'.proj-card .pc-link',
+'.jrn-h2',
+'.jrn-note',
+'.jitem',
+'.sk-h2',
+'.sk-row',
+'.aw-h2',
+'.aw',
+'.ct-tag',
+'.ct-title',
+'.ct-right'
+];
+const textItems = Array.from(document.querySelectorAll(motionSelectors.join(',')));
+textItems.forEach((el,i)=>{
+if(el.closest('#hero')) return;
+el.classList.add('text-motion');
+if(el.matches('.about-big,.proj-hdr h2,.jrn-h2,.sk-h2,.aw-h2,.ct-title')) el.classList.add('motion-headline');
+el.style.setProperty('--tm-delay', ((i % 7) * 55) + 'ms');
+});
+document.querySelectorAll('.jitem,.aw,.sk-row,.sbox,.proj-stat').forEach(el=>el.classList.add('text-group-motion'));
+const textIo = new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(!e.isIntersecting) return;
+e.target.classList.add('in');
+textIo.unobserve(e.target);
+});
+},{threshold:.08,rootMargin:'0px 0px -35px 0px'});
+textItems.forEach(el=>textIo.observe(el));
+})();
 
-  /* ── COUNTER ANIMATION ── */
-  document.querySelectorAll('.snum').forEach(el=>{
-    const io=new IntersectionObserver(entries=>{
-      if(!entries[0].isIntersecting)return;
-      const text=el.textContent;
-      const num=parseInt(text);
-      const suffix=text.replace(/[0-9]/g,'');
-      if(isNaN(num)){io.disconnect();return;}
-      let start=0;const dur=1200;const t0=performance.now();
-      function tick(now){
-        const p=Math.min((now-t0)/dur,1);
-        const ease=1-Math.pow(1-p,3);
-        el.textContent=Math.round(ease*num)+suffix;
-        if(p<1)requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-      io.disconnect();
-    },{threshold:.5});
-    io.observe(el);
-  });
+/* ── COUNTER ANIMATION ── */
+document.querySelectorAll('.snum').forEach(el=>{
+const io=new IntersectionObserver(entries=>{
+if(!entries[0].isIntersecting)return;
+const text=el.textContent;
+const num=parseInt(text);
+const suffix=text.replace(/[0-9]/g,'');
+if(isNaN(num)){io.disconnect();return;}
+let start=0;const dur=1200;const t0=performance.now();
+function tick(now){
+const p=Math.min((now-t0)/dur,1);
+const ease=1-Math.pow(1-p,3);
+el.textContent=Math.round(ease*num)+suffix;
+if(p<1)requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+io.disconnect();
+},{threshold:.5});
+io.observe(el);
+});
 
-  /* ── SKILL METERS ── */
-  const skIo = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(!e.isIntersecting) return;
-      e.target.querySelectorAll('.sk-bf').forEach((bar,i)=>{
-        setTimeout(()=>bar.classList.add('go'), i*90);
-      });
-      skIo.unobserve(e.target);
-    });
-  },{threshold:.1});
-  const sk = document.getElementById('sklist');
-  if(sk) skIo.observe(sk);
+/* ── SKILL METERS ── */
+const skIo = new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(!e.isIntersecting) return;
+e.target.querySelectorAll('.sk-bf').forEach((bar,i)=>{
+setTimeout(()=>bar.classList.add('go'), i*90);
+});
+skIo.unobserve(e.target);
+});
+},{threshold:.1});
+const sk = document.getElementById('sklist');
+if(sk) skIo.observe(sk);
 
-  /* ── FOOTER YEAR ── */
-  const fyEl = document.getElementById('footer-year');
-  if(fyEl) fyEl.textContent = '© ' + new Date().getFullYear() + ' Aniket Humbe';
+/* ── FOOTER YEAR ── */
+const fyEl = document.getElementById('footer-year');
+if(fyEl) fyEl.textContent = '© ' + new Date().getFullYear() + ' Aniket Humbe';
 
-  /* MAGNETIC BUTTONS */
-  document.querySelectorAll('.h-btn,.ct-cv-btn').forEach(function(btn){
-    btn.addEventListener('mousemove',function(e){
-      var r=btn.getBoundingClientRect();
-      var dx=(e.clientX-r.left-r.width/2)*0.15;
-      var dy=(e.clientY-r.top-r.height/2)*0.15;
-      btn.style.transform='translate('+dx+'px,'+dy+'px) scale(1.04)';
-    });
-    btn.addEventListener('mouseleave',function(){btn.style.transform='';});
-  });
+/* MAGNETIC BUTTONS */
+document.querySelectorAll('.h-btn,.ct-cv-btn').forEach(function(btn){
+btn.addEventListener('mousemove',function(e){
+var r=btn.getBoundingClientRect();
+var dx=(e.clientX-r.left-r.width/2)*0.15;
+var dy=(e.clientY-r.top-r.height/2)*0.15;
+btn.style.transform='translate('+dx+'px,'+dy+'px) scale(1.04)';
+});
+btn.addEventListener('mouseleave',function(){btn.style.transform='';});
+});
 
-  /* TILT PROJ CARDS */
-  document.querySelectorAll('.proj-card').forEach(function(card){
-    card.addEventListener('mousemove',function(e){
-      var r=card.getBoundingClientRect();
-      var x=(e.clientX-r.left)/r.width-.5;
-      var y=(e.clientY-r.top)/r.height-.5;
-      var active=card.classList.contains('active');
-      var lift=active?-18:-6;
-      var scale=active?1.02:.96;
-      card.style.transform='translateY('+lift+'px) scale('+scale+') rotateX('+(-y*5)+'deg) rotateY('+(x*5)+'deg)';
-    });
-    card.addEventListener('mouseleave',function(){card.style.transform='';});
-  });
+/* TILT PROJ CARDS */
+document.querySelectorAll('.proj-card').forEach(function(card){
+card.addEventListener('mousemove',function(e){
+var r=card.getBoundingClientRect();
+var x=(e.clientX-r.left)/r.width-.5;
+var y=(e.clientY-r.top)/r.height-.5;
+var active=card.classList.contains('active');
+var lift=active?-18:-6;
+var scale=active?1.02:.96;
+card.style.transform='translateY('+lift+'px) scale('+scale+') rotateX('+(-y*5)+'deg) rotateY('+(x*5)+'deg)';
+});
+card.addEventListener('mouseleave',function(){card.style.transform='';});
+});
 
-  /* PROJ CARD 3D PERSPECTIVE */
-  var projTrackWrap=document.querySelector('.proj-track-wrap');
-  if(projTrackWrap) projTrackWrap.style.perspective='1000px';
+/* PROJ CARD 3D PERSPECTIVE */
+var projTrackWrap=document.querySelector('.proj-track-wrap');
+if(projTrackWrap) projTrackWrap.style.perspective='1000px';
 }
 </script>
 </body>
