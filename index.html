@@ -75,7 +75,9 @@ body.hov #cur-dot{transform:translate(-50%,-50%) scale(1.4);background:var(--acc
 
 /* ── HERO ── */
 #hero{position:relative;height:100vh;overflow:hidden}
+.hero-visual{position:absolute;inset:0;overflow:hidden}
 .h-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;will-change:transform}
+.hero-image{display:block}
 .h-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(15,14,11,.22) 0%,rgba(15,14,11,.08) 35%,rgba(15,14,11,.48) 70%,rgba(15,14,11,.86) 100%)}
 .h-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 52px 60px}
 .h-top-row{position:absolute;top:0;left:0;right:0;padding:100px 52px 0;display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none}
@@ -680,7 +682,9 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 
 <!-- ══ HERO ══ -->
 <section id="hero">
-  <video id="hImg" class="h-img" src="assets/intro-video.mp4" autoplay muted loop playsinline preload="auto" aria-label="Aniket Humbe intro video"></video>
+  <div class="hero-visual">
+    <img id="hImg" class="h-img hero-image" src="assets/hero-image.jpg" alt="Aniket Humbe hero portrait">
+  </div>
   <div class="h-overlay"></div>
 
   <!-- subtle ambient top info - parallax layer 1 (slowest) -->
