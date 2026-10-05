@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://humbeaniket2006-max.github.io/my-portfolio/sitemap.xml
