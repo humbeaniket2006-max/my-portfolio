@@ -1,14 +1,14 @@
-"""Render every project tile through frame.html -> assets/work/<slug>.webp (1440x1080) and <slug>-720.webp.
+"""Render every project tile through frame.html -> assets/images/work/<slug>.webp (1440x1080) and <slug>-720.webp.
 Run: python3 tools/thumbnails/render.py [slug ...]
-Source material lives in assets/source/. Crops are cached in tools/thumbnails/cache/."""
+Source material lives in tools/thumbnails/source/. Crops are cached in tools/thumbnails/cache/."""
 import os, sys, io, http.server, threading, functools
 from PIL import Image
 from playwright.sync_api import sync_playwright
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
-SRC = os.path.join(ROOT, "assets", "source")
-OUT = os.path.join(ROOT, "assets", "work")
+SRC = os.path.join(HERE, "source")
+OUT = os.path.join(ROOT, "assets", "images", "work")
 CACHE = os.path.join(HERE, "cache")
 os.makedirs(OUT, exist_ok=True); os.makedirs(CACHE, exist_ok=True)
 
@@ -39,7 +39,7 @@ def tile_ocular():
 <text x="485" y="476" font-size="19" text-anchor="middle" fill="#5F5B54">OpenVINO FP16</text>
 </svg>'''
     imgs = [("ocular-baseline-lite.png", "baseline_lite"), ("ocular-normal-map.png", "normal_map"), ("ocular-stress-test.png", "stress_test")]
-    cells = "".join(f'<div><img src="/assets/source/{f}" alt=""><span class="cap">{c}</span></div>' for f, c in imgs)
+    cells = "".join(f'<div><img src="/tools/thumbnails/source/{f}" alt=""><span class="cap">{c}</span></div>' for f, c in imgs)
     return f'<div class="grid4">{cells}<div>{bar}</div></div>'
 
 def tile_capi():
@@ -96,11 +96,11 @@ def build_tiles():
         "brand-ad-video-analyzer": cover(br),
         "msme-data-index": cover(ms, "0% 0%"),
         "ooho-build-vs-buy": typo("07", "OOHO build vs buy", ["Excel", "Vendor quotes", "5-year model"], big="Rs. 23.54L", bigsmall="in-house, 5 years"),
-        "inhaus-coffee": f'<img class="cover" src="/assets/source/inhaus-creator-fuel.jpg" style="object-fit:contain;background:#e0d2c7" alt="">',
+        "inhaus-coffee": f'<img class="cover" src="/tools/thumbnails/source/inhaus-creator-fuel.jpg" style="object-fit:contain;background:#e0d2c7" alt="">',
         "suryagrid": tile_surya(),
         "jcas-ai": cover(jc, "0% 0%"),
         "cybershield": cover(cy, "50% 0%"),
-        "shopsense-ar": '<img class="cover" src="/assets/source/shopsense-lens-studio.jpg" style="object-position:50% 50%" alt="">',
+        "shopsense-ar": '<img class="cover" src="/tools/thumbnails/source/shopsense-lens-studio.jpg" style="object-position:50% 50%" alt="">',
         "business-strategy-analyser": typo("12", "Business Strategy Analyser", ["Claude API", "SWOT", "Five Forces"]),
         "mixpanel-implementation": typo("14", "Mixpanel Implementation", ["Mixpanel", "UTM", "Freshsales"], big="34 events", bigsmall="across 7 funnels"),
         "weekly-crm-ads-report": typo("15", "Weekly CRM/Ads Report", ["Claude", "MCP", "GitHub Actions"], big="2 MCP servers", bigsmall="reconciled every week", size=150),

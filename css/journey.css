@@ -1,0 +1,29 @@
+#journey{padding:115px 52px;background:var(--bg)}
+.jrn-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:64px}
+.jrn-h2{font-family:var(--serif);font-size:clamp(40px,6vw,78px);font-weight:900;line-height:.93;color:var(--fg)}
+.jrn-h2 em{font-style:italic;color:var(--muted2)}
+.jrn-note{font-size:11px;color:var(--muted);font-family:var(--sans);max-width:170px;line-height:1.65;text-align:right}
+.jrn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.jcol{padding:32px 26px;background:var(--bg)}
+.jcol-lbl{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--border);font-family:var(--mono)}
+.jitem{padding:16px 0;border-bottom:1px solid rgba(15,14,11,.05);transition:padding-left .25s}
+.jitem:hover{padding-left:8px}
+.jitem:last-child{border-bottom:none}
+.jdate{font-size:9px;color:var(--accent);letter-spacing:.1em;margin-bottom:4px;font-family:var(--mono)}
+.jtitle{font-family:var(--serif);font-size:14px;font-weight:700;margin-bottom:4px;color:var(--fg)}
+.jsub{font-size:11.5px;color:var(--muted);line-height:1.65;font-family:var(--sans);font-weight:300}
+@media(max-width:900px){
+  #journey{padding:72px 22px}
+  .jrn-hdr{flex-direction:column;align-items:flex-start;gap:12px}
+  .jrn-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .jrn-h2{font-size:clamp(30px,10vw,50px)}
+}
+.jcert-link{display:inline-flex;align-items:center;gap:4px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-family:var(--mono);margin-top:6px;opacity:.75;transition:opacity .2s}
+.jcert-link:hover{opacity:1}
+.jitem{position:relative}
+.jitem::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--accent);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.jitem:hover::before{transform:scaleY(1)}
+.jitem:hover .jtitle{color:var(--accent)}
+.jtitle{transition:color .25s}

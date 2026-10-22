@@ -1,0 +1,9 @@
+:root{
+  --bg:#f5f2eb; --bg2:#edeae2; --fg:#0f0e0b;
+  --muted:#6b6357; --muted2:#a09890;
+  --accent:#1a7a3c;
+  --border:rgba(15,14,11,.1); --card:#fff;
+  --serif:'Playfair Display',serif;
+  --sans:'Syne',sans-serif;
+  --mono:'DM Mono',monospace;
+}

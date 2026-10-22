@@ -1,0 +1,9 @@
+.marq{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 0;background:var(--bg2)}
+.marq-t{display:flex;width:max-content;animation:mq 25s linear infinite}
+.marq.rev .marq-t{animation-direction:reverse}
+.marq-item{font-family:var(--serif);font-style:italic;font-size:clamp(17px,2.6vw,30px);font-weight:900;color:rgba(15,14,11,.11);padding:0 34px;white-space:nowrap}
+.marq-item.a{color:rgba(26,122,60,.38)}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marq-t{animation:mq 25s linear infinite}
+.marq:hover .marq-t{animation-play-state:paused}
+.marq.rev .marq-t{animation-direction:reverse}
